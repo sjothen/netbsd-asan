@@ -141,6 +141,12 @@ NOERR=	getegid.S geteuid.S getgid.S getpid.S getppid.S getuid.S \
 
 PSEUDONOERR=	_exit.S
 
+.ifdef LIBC_ASAN
+	CPPFLAGS.read.S+= -DINTERCEPTED
+	CPPFLAGS.getgroups.S+= -DINTERCEPTED
+	CPPFLAGS.getsockname.S+= -DINTERCEPTED
+.endif
+
 SRCS+=		${ASM} ${WEAKASM} ${NOERR} ${PSEUDONOERR} ${ASM_GLUE}
 CLEANFILES+=	${ASM} ${WEAKASM} ${NOERR} ${PSEUDONOERR} ${ASM_GLUE}
 
@@ -159,7 +165,10 @@ ${ASM_GLUE}: ${ASMDEPS}
 
 ${WEAKASM}: ${ASMDEPS}
 	${_MKTARGET_CREATE}
-	printf '#include "SYS.h"\nWSYSCALL(${.PREFIX},_sys_${.PREFIX})\nWEAK_ALIAS(_${.PREFIX},_sys_${.PREFIX})\n' >${.TARGET}
+	printf '#include "SYS.h"\nWSYSCALL(${.PREFIX},_sys_${.PREFIX})\n' >${.TARGET}
+.ifndef LIBC_ASAN
+	printf 'WEAK_ALIAS(_${.PREFIX},_sys_${.PREFIX})\n' >>${.TARGET}
+.endif
 
 ${NOERR}: ${ASMDEPS}
 	${_MKTARGET_CREATE}

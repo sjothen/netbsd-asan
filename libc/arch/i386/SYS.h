@@ -98,7 +98,11 @@
 #endif
 
 #define _SYSCALL_NOERROR(x,y)						\
+#ifndef INTERCEPTED							\
+	ENTRY(_asan ## x);						\
+#else									\
 	ENTRY(x);							\
+#endif									\
 	SYSTRAP(y)
 
 #ifdef PIC
@@ -142,7 +146,9 @@
 
 #ifdef WEAK_ALIAS
 #define	WSYSCALL(weak,strong)						\
+#ifndef INTERCEPTED							\
 	WEAK_ALIAS(weak,strong);					\
+#endif									\
 	PSEUDO(strong,weak)
 #else
 #define	WSYSCALL(weak,strong)						\
