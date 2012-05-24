@@ -1,0 +1,22 @@
+/Makefile.inc/1.4/Sat Feb 14 20:20:44 1998//Tnetbsd-5-1-2-RELEASE
+/cfgetispeed.c/1.7/Thu Aug  7 16:44:12 2003//Tnetbsd-5-1-2-RELEASE
+/cfgetospeed.c/1.7/Thu Aug  7 16:44:12 2003//Tnetbsd-5-1-2-RELEASE
+/cfmakeraw.c/1.9/Thu Aug  7 16:44:12 2003//Tnetbsd-5-1-2-RELEASE
+/cfsetispeed.c/1.7/Thu Aug  7 16:44:12 2003//Tnetbsd-5-1-2-RELEASE
+/cfsetospeed.c/1.7/Thu Aug  7 16:44:12 2003//Tnetbsd-5-1-2-RELEASE
+/cfsetspeed.c/1.7/Thu Aug  7 16:44:13 2003//Tnetbsd-5-1-2-RELEASE
+/tcdrain.c/1.8/Thu Aug  7 16:44:13 2003//Tnetbsd-5-1-2-RELEASE
+/tcflow.c/1.8/Thu Aug  7 16:44:13 2003//Tnetbsd-5-1-2-RELEASE
+/tcflush.c/1.9/Thu Aug  7 16:44:13 2003//Tnetbsd-5-1-2-RELEASE
+/tcgetattr.c/1.9/Thu Aug  7 16:44:13 2003//Tnetbsd-5-1-2-RELEASE
+/tcgetpgrp.3/1.11/Thu Aug  7 16:44:13 2003//Tnetbsd-5-1-2-RELEASE
+/tcgetpgrp.c/1.9/Wed Dec  1 21:37:15 2004//Tnetbsd-5-1-2-RELEASE
+/tcgetsid.3/1.5/Thu Aug  7 16:44:13 2003//Tnetbsd-5-1-2-RELEASE
+/tcgetsid.c/1.6/Thu Aug  7 16:44:13 2003//Tnetbsd-5-1-2-RELEASE
+/tcsendbreak.3/1.9/Thu Aug  7 16:44:13 2003//Tnetbsd-5-1-2-RELEASE
+/tcsendbreak.c/1.9/Thu Aug  7 16:44:14 2003//Tnetbsd-5-1-2-RELEASE
+/tcsetattr.3/1.12/Sat May  1 08:15:54 2004//Tnetbsd-5-1-2-RELEASE
+/tcsetattr.c/1.8/Thu Aug  7 16:44:14 2003//Tnetbsd-5-1-2-RELEASE
+/tcsetpgrp.3/1.10/Thu Aug  7 16:44:14 2003//Tnetbsd-5-1-2-RELEASE
+/tcsetpgrp.c/1.9/Thu Aug  7 16:44:14 2003//Tnetbsd-5-1-2-RELEASE
+D

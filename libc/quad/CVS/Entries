@@ -1,0 +1,10 @@
+/Makefile.inc/1.10/Fri May 18 15:23:44 2001//Tnetbsd-5-1-2-RELEASE
+/fixdfdi.c/1.4/Thu Aug  7 16:43:16 2003//Tnetbsd-5-1-2-RELEASE
+/fixsfdi.c/1.4/Thu Aug  7 16:43:16 2003//Tnetbsd-5-1-2-RELEASE
+/fixunsdfdi.c/1.7/Thu Aug  7 16:43:16 2003//Tnetbsd-5-1-2-RELEASE
+/fixunssfdi.c/1.6/Thu Aug  7 16:43:16 2003//Tnetbsd-5-1-2-RELEASE
+/floatdidf.c/1.6/Thu Aug  7 16:43:16 2003//Tnetbsd-5-1-2-RELEASE
+/floatdisf.c/1.6/Thu Aug  7 16:43:16 2003//Tnetbsd-5-1-2-RELEASE
+/floatunsdidf.c/1.6/Thu Aug  7 16:43:16 2003//Tnetbsd-5-1-2-RELEASE
+D/TESTS////
+D

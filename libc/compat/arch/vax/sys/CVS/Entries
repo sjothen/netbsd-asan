@@ -1,0 +1,13 @@
+/Makefile.inc/1.1/Sat Feb 18 22:54:51 2006//Tnetbsd-5-1-2-RELEASE
+/compat_Ovfork.S/1.1/Sat Feb 18 22:54:51 2006//Tnetbsd-5-1-2-RELEASE
+/compat___semctl.S/1.2/Mon Apr 28 20:22:59 2008//Tnetbsd-5-1-2-RELEASE
+/compat___sigreturn14.S/1.1/Sat Feb 18 22:54:51 2006//Tnetbsd-5-1-2-RELEASE
+/compat___sigtramp2.S/1.1/Sat Feb 18 22:54:51 2006//Tnetbsd-5-1-2-RELEASE
+/compat_msgctl.S/1.2/Mon Apr 28 20:22:59 2008//Tnetbsd-5-1-2-RELEASE
+/compat_shmctl.S/1.2/Mon Apr 28 20:22:59 2008//Tnetbsd-5-1-2-RELEASE
+/compat_sigaction13.S/1.2/Mon Apr 28 20:22:59 2008//Tnetbsd-5-1-2-RELEASE
+/compat_sigpending13.S/1.1/Sat Feb 18 22:54:51 2006//Tnetbsd-5-1-2-RELEASE
+/compat_sigprocmask13.S/1.1/Sat Feb 18 22:54:51 2006//Tnetbsd-5-1-2-RELEASE
+/compat_sigreturn13.S/1.1/Sat Feb 18 22:54:51 2006//Tnetbsd-5-1-2-RELEASE
+/compat_sigsuspend13.S/1.1/Sat Feb 18 22:54:51 2006//Tnetbsd-5-1-2-RELEASE
+D

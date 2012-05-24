@@ -1,0 +1,27 @@
+/Makefile.inc/1.8/Sun Oct 26 07:43:07 2008//Tnetbsd-5-1-2-RELEASE
+/compat___fts13.c/1.4/Thu Jul 27 15:46:30 2006//Tnetbsd-5-1-2-RELEASE
+/compat___fts30.c/1.2/Thu Jul 27 15:46:30 2006//Tnetbsd-5-1-2-RELEASE
+/compat___fts31.c/1.1/Thu Jul 27 15:46:30 2006//Tnetbsd-5-1-2-RELEASE
+/compat___glob13.c/1.1/Sun Mar 26 18:11:22 2006//Tnetbsd-5-1-2-RELEASE
+/compat__readdir_unlocked30.c/1.1/Sun May  4 18:53:26 2008//Tnetbsd-5-1-2-RELEASE
+/compat__sys_errlist.c/1.1/Tue Sep 13 01:44:09 2005//Tnetbsd-5-1-2-RELEASE
+/compat__sys_nerr.c/1.1/Tue Sep 13 01:44:09 2005//Tnetbsd-5-1-2-RELEASE
+/compat__sys_siglist.c/1.1/Tue Sep 13 01:44:09 2005//Tnetbsd-5-1-2-RELEASE
+/compat_errlist.c/1.2/Tue Oct 31 00:38:07 2006//Tnetbsd-5-1-2-RELEASE
+/compat_frexp_ieee754.c/1.4/Sun Sep 28 15:19:09 2008//Tnetbsd-5-1-2-RELEASE
+/compat_fts.c/1.2/Sun Dec 11 04:12:58 2005//Tnetbsd-5-1-2-RELEASE
+/compat_getmntinfo.c/1.1/Tue Sep 13 01:44:09 2005//Tnetbsd-5-1-2-RELEASE
+/compat_glob.c/1.1/Tue Sep 13 01:44:09 2005//Tnetbsd-5-1-2-RELEASE
+/compat_ldexp_ieee754.c/1.4/Sun Sep 28 18:54:30 2008//Tnetbsd-5-1-2-RELEASE
+/compat_modf_ieee754.c/1.2/Sun Sep 28 15:19:09 2008//Tnetbsd-5-1-2-RELEASE
+/compat_opendir.c/1.1/Tue Sep 13 01:44:09 2005//Tnetbsd-5-1-2-RELEASE
+/compat_readdir.c/1.1/Tue Sep 13 01:44:09 2005//Tnetbsd-5-1-2-RELEASE
+/compat_scandir.c/1.1/Tue Sep 13 01:44:09 2005//Tnetbsd-5-1-2-RELEASE
+/compat_siglist.c/1.1/Tue Sep 13 01:44:09 2005//Tnetbsd-5-1-2-RELEASE
+/compat_signame.c/1.1/Tue Sep 13 01:44:09 2005//Tnetbsd-5-1-2-RELEASE
+/compat_sigsetops.c/1.1/Tue Sep 13 01:44:09 2005//Tnetbsd-5-1-2-RELEASE
+/compat_times.c/1.1/Tue Sep 13 01:44:09 2005//Tnetbsd-5-1-2-RELEASE
+/compat_timezone.c/1.2/Tue Nov 29 03:11:58 2005//Tnetbsd-5-1-2-RELEASE
+/compat_unvis.c/1.2/Sat Mar 10 01:13:14 2007//Tnetbsd-5-1-2-RELEASE
+/compat_utmpx.c/1.2/Mon Apr 28 20:22:59 2008//Tnetbsd-5-1-2-RELEASE
+D

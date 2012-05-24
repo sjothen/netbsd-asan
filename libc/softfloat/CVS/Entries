@@ -1,0 +1,40 @@
+/Makefile.inc/1.4/Sun Sep 26 21:13:27 2004//Tnetbsd-5-1-2-RELEASE
+/README.NetBSD/1.2/Tue May 21 23:51:05 2002//Tnetbsd-5-1-2-RELEASE
+/README.txt/1.1/Tue Jun  6 08:15:02 2000//Tnetbsd-5-1-2-RELEASE
+/eqdf2.c/1.1/Tue Jun  6 08:15:02 2000//Tnetbsd-5-1-2-RELEASE
+/eqsf2.c/1.1/Tue Jun  6 08:15:03 2000//Tnetbsd-5-1-2-RELEASE
+/fpgetmask.c/1.4/Mon Apr 28 20:23:00 2008//Tnetbsd-5-1-2-RELEASE
+/fpgetround.c/1.3/Mon Apr 28 20:23:00 2008//Tnetbsd-5-1-2-RELEASE
+/fpgetsticky.c/1.3/Mon Apr 28 20:23:00 2008//Tnetbsd-5-1-2-RELEASE
+/fpsetmask.c/1.4/Mon Apr 28 20:23:00 2008//Tnetbsd-5-1-2-RELEASE
+/fpsetround.c/1.3/Mon Apr 28 20:23:00 2008//Tnetbsd-5-1-2-RELEASE
+/fpsetsticky.c/1.3/Mon Apr 28 20:23:00 2008//Tnetbsd-5-1-2-RELEASE
+/gedf2.c/1.1/Tue Jun  6 08:15:05 2000//Tnetbsd-5-1-2-RELEASE
+/gesf2.c/1.1/Tue Jun  6 08:15:05 2000//Tnetbsd-5-1-2-RELEASE
+/gexf2.c/1.2/Mon Sep 27 10:16:24 2004//Tnetbsd-5-1-2-RELEASE
+/gtdf2.c/1.1/Tue Jun  6 08:15:05 2000//Tnetbsd-5-1-2-RELEASE
+/gtsf2.c/1.1/Tue Jun  6 08:15:06 2000//Tnetbsd-5-1-2-RELEASE
+/gtxf2.c/1.2/Mon Sep 27 10:16:24 2004//Tnetbsd-5-1-2-RELEASE
+/ledf2.c/1.1/Tue Jun  6 08:15:06 2000//Tnetbsd-5-1-2-RELEASE
+/lesf2.c/1.1/Tue Jun  6 08:15:06 2000//Tnetbsd-5-1-2-RELEASE
+/ltdf2.c/1.1/Tue Jun  6 08:15:06 2000//Tnetbsd-5-1-2-RELEASE
+/ltsf2.c/1.1/Tue Jun  6 08:15:06 2000//Tnetbsd-5-1-2-RELEASE
+/nedf2.c/1.1/Tue Jun  6 08:15:07 2000//Tnetbsd-5-1-2-RELEASE
+/negdf2.c/1.1/Tue Jun  6 08:15:07 2000//Tnetbsd-5-1-2-RELEASE
+/negsf2.c/1.1/Tue Jun  6 08:15:07 2000//Tnetbsd-5-1-2-RELEASE
+/negxf2.c/1.2/Mon Sep 27 10:16:24 2004//Tnetbsd-5-1-2-RELEASE
+/nesf2.c/1.1/Tue Jun  6 08:15:07 2000//Tnetbsd-5-1-2-RELEASE
+/nexf2.c/1.2/Mon Sep 27 10:16:24 2004//Tnetbsd-5-1-2-RELEASE
+/softfloat-for-gcc.h/1.7/Sun Sep 26 21:13:27 2004//Tnetbsd-5-1-2-RELEASE
+/softfloat-history.txt/1.1/Tue Jun  6 08:15:08 2000//Tnetbsd-5-1-2-RELEASE
+/softfloat-source.txt/1.2/Fri Nov 24 19:46:58 2006//Tnetbsd-5-1-2-RELEASE
+/softfloat-specialize/1.4/Sun Sep 26 21:13:27 2004//Tnetbsd-5-1-2-RELEASE
+/softfloat.txt/1.2/Fri Nov 24 19:46:58 2006//Tnetbsd-5-1-2-RELEASE
+/timesoftfloat.c/1.1/Tue Jun  6 08:15:11 2000//Tnetbsd-5-1-2-RELEASE
+/timesoftfloat.txt/1.1/Tue Jun  6 08:15:11 2000//Tnetbsd-5-1-2-RELEASE
+/unorddf2.c/1.1/Tue May  6 08:58:19 2003//Tnetbsd-5-1-2-RELEASE
+/unordsf2.c/1.1/Tue May  6 08:58:20 2003//Tnetbsd-5-1-2-RELEASE
+D/bits32////
+D/bits64////
+D/templates////
+D

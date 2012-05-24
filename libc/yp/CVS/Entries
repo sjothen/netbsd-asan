@@ -1,0 +1,14 @@
+/Makefile.inc/1.14/Wed Feb 24 15:05:21 1999//Tnetbsd-5-1-2-RELEASE
+/local.h/1.2/Mon Jul 21 14:09:24 1997//Tnetbsd-5-1-2-RELEASE
+/xdryp.c/1.30/Thu May 11 17:11:57 2006//Tnetbsd-5-1-2-RELEASE
+/yp_all.c/1.12/Wed Dec 10 12:06:25 2003//Tnetbsd-5-1-2-RELEASE
+/yp_first.c/1.14/Wed Dec 10 12:06:25 2003//Tnetbsd-5-1-2-RELEASE
+/yp_maplist.c/1.11/Wed Dec 10 12:06:25 2003//Tnetbsd-5-1-2-RELEASE
+/yp_master.c/1.13/Wed Dec 10 12:06:25 2003//Tnetbsd-5-1-2-RELEASE
+/yp_match.c/1.17/Tue Nov 29 03:12:01 2005//Tnetbsd-5-1-2-RELEASE
+/yp_order.c/1.12/Wed Dec 10 12:06:25 2003//Tnetbsd-5-1-2-RELEASE
+/ypclnt.3/1.23/Wed Apr 30 13:10:51 2008//Tnetbsd-5-1-2-RELEASE
+/yperr_string.c/1.7/Tue Nov 29 03:12:01 2005//Tnetbsd-5-1-2-RELEASE
+/yplib.c/1.43/Fri Nov  3 20:18:49 2006//Tnetbsd-5-1-2-RELEASE
+/ypprot_err.c/1.5/Wed Dec 10 12:06:25 2003//Tnetbsd-5-1-2-RELEASE
+D

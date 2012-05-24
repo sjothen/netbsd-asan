@@ -1,0 +1,21 @@
+/Makefile.inc/1.16/Mon Apr 24 17:15:06 2006//Tnetbsd-5-1-2-RELEASE
+/creat.3/1.16/Thu Aug  7 16:42:39 2003//Tnetbsd-5-1-2-RELEASE
+/creat.c/1.10/Thu Aug  7 16:42:39 2003//Tnetbsd-5-1-2-RELEASE
+/getdtablesize.3/1.13/Thu Aug  7 16:42:39 2003//Tnetbsd-5-1-2-RELEASE
+/getdtablesize.c/1.9/Sat Jul 26 19:24:41 2003//Tnetbsd-5-1-2-RELEASE
+/gethostid.3/1.12/Thu Aug  7 16:42:39 2003//Tnetbsd-5-1-2-RELEASE
+/gethostid.c/1.6/Mon Apr 19 13:16:42 2004//Tnetbsd-5-1-2-RELEASE
+/getwd.c/1.14/Thu Aug  7 16:42:39 2003//Tnetbsd-5-1-2-RELEASE
+/killpg.3/1.16/Thu Aug  7 16:42:39 2003//Tnetbsd-5-1-2-RELEASE
+/killpg.c/1.8/Thu Aug  7 16:42:39 2003//Tnetbsd-5-1-2-RELEASE
+/sethostid.c/1.7/Mon Apr 19 13:16:42 2004//Tnetbsd-5-1-2-RELEASE
+/setpgrp.c/1.8/Thu Aug  7 16:42:40 2003//Tnetbsd-5-1-2-RELEASE
+/setrgid.c/1.12/Thu Aug  7 16:42:40 2003//Tnetbsd-5-1-2-RELEASE
+/setruid.3/1.10/Thu Aug  7 16:42:40 2003//Tnetbsd-5-1-2-RELEASE
+/setruid.c/1.13/Thu Aug  7 16:42:40 2003//Tnetbsd-5-1-2-RELEASE
+/sigblock.3/1.17/Thu Aug  7 16:42:40 2003//Tnetbsd-5-1-2-RELEASE
+/sigcompat.c/1.13/Sat Dec 24 21:11:16 2005//Tnetbsd-5-1-2-RELEASE
+/sigpause.3/1.15/Thu Aug  7 16:42:40 2003//Tnetbsd-5-1-2-RELEASE
+/sigsetmask.3/1.18/Thu Aug  7 16:42:40 2003//Tnetbsd-5-1-2-RELEASE
+/sigvec.3/1.25/Sat Dec  3 21:05:31 2005//Tnetbsd-5-1-2-RELEASE
+D

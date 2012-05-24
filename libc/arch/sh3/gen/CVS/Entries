@@ -1,0 +1,12 @@
+/Makefile.inc/1.24/Wed Jun 28 14:46:32 2006//Tnetbsd-5-1-2-RELEASE
+/_lwp.c/1.4/Sun Jun 12 05:21:26 2005//Tnetbsd-5-1-2-RELEASE
+/_setjmp.S/1.7/Thu Jan  5 02:04:41 2006//Tnetbsd-5-1-2-RELEASE
+/fabs.c/1.3/Sun May 21 02:51:15 2006//Tnetbsd-5-1-2-RELEASE
+/flt_rounds.c/1.4/Wed Jan 17 23:24:22 2007//Tnetbsd-5-1-2-RELEASE
+/makecontext.c/1.4/Mon Apr 28 20:22:57 2008//Tnetbsd-5-1-2-RELEASE
+/nanf.c/1.3/Fri Apr 15 22:39:11 2005//Tnetbsd-5-1-2-RELEASE
+/resumecontext.c/1.4/Mon Apr 28 20:22:57 2008//Tnetbsd-5-1-2-RELEASE
+/setjmp.S/1.10/Thu Jan  5 19:21:37 2006//Tnetbsd-5-1-2-RELEASE
+/sigsetjmp.S/1.9/Thu Jan  5 19:21:37 2006//Tnetbsd-5-1-2-RELEASE
+/swapcontext.S/1.9/Mon Apr 28 20:22:57 2008//Tnetbsd-5-1-2-RELEASE
+D

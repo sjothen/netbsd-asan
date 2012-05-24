@@ -1,0 +1,26 @@
+/Makefile.inc/1.13/Mon Jul  3 13:13:53 2006//Tnetbsd-5-1-2-RELEASE
+/__setjmp14.S/1.1/Tue Jun 19 00:25:02 2001//Tnetbsd-5-1-2-RELEASE
+/__sigsetjmp14.S/1.1/Tue Jun 19 00:25:02 2001//Tnetbsd-5-1-2-RELEASE
+/_lwp.c/1.4/Mon Apr 28 20:22:58 2008//Tnetbsd-5-1-2-RELEASE
+/_setjmp.S/1.1/Tue Jun 19 00:25:02 2001//Tnetbsd-5-1-2-RELEASE
+/alloca.S/1.1/Tue Jun 19 00:25:02 2001//Tnetbsd-5-1-2-RELEASE
+/bswap64.S/1.1/Tue Jun 19 00:25:02 2001//Tnetbsd-5-1-2-RELEASE
+/fabs.S/1.3/Tue Mar 23 17:11:35 2004//Tnetbsd-5-1-2-RELEASE
+/flt_rounds.S/1.2/Thu Jun  6 23:04:35 2002//Tnetbsd-5-1-2-RELEASE
+/fpclassifyl.c/1.4/Mon Apr 28 20:22:58 2008//Tnetbsd-5-1-2-RELEASE
+/fpgetmask.S/1.3/Wed Jun 12 19:17:22 2002//Tnetbsd-5-1-2-RELEASE
+/fpgetround.S/1.3/Wed Jun 12 19:17:22 2002//Tnetbsd-5-1-2-RELEASE
+/fpgetsticky.S/1.3/Wed Jun 12 19:17:22 2002//Tnetbsd-5-1-2-RELEASE
+/fpsetmask.S/1.3/Wed Jun 12 19:17:22 2002//Tnetbsd-5-1-2-RELEASE
+/fpsetround.S/1.3/Wed Jun 12 19:17:22 2002//Tnetbsd-5-1-2-RELEASE
+/fpsetsticky.S/1.5/Tue Mar  9 17:16:13 2004//Tnetbsd-5-1-2-RELEASE
+/infinityl.c/1.2/Sun Jun 12 05:21:27 2005//Tnetbsd-5-1-2-RELEASE
+/isfinitel.c/1.3/Mon Apr 28 20:22:58 2008//Tnetbsd-5-1-2-RELEASE
+/isinfl.c/1.6/Fri Feb  2 23:19:25 2007//Tnetbsd-5-1-2-RELEASE
+/isnanl.c/1.6/Fri Feb  2 23:19:25 2007//Tnetbsd-5-1-2-RELEASE
+/makecontext.c/1.3/Mon Apr 28 20:22:58 2008//Tnetbsd-5-1-2-RELEASE
+/nanf.c/1.3/Fri Apr 15 22:39:11 2005//Tnetbsd-5-1-2-RELEASE
+/resumecontext.S/1.4/Mon Apr 28 20:22:58 2008//Tnetbsd-5-1-2-RELEASE
+/signbitl.c/1.2/Mon Apr 28 20:22:58 2008//Tnetbsd-5-1-2-RELEASE
+/swapcontext.S/1.4/Thu Apr 12 12:33:26 2007//Tnetbsd-5-1-2-RELEASE
+D

@@ -1,0 +1,41 @@
+/Makefile/1.136/Sun Oct 26 07:43:07 2008//Tnetbsd-5-1-2-RELEASE
+/Makefile.inc/1.4/Sun Oct 26 07:42:09 2008//Tnetbsd-5-1-2-RELEASE
+/libcincludes.mk/1.1/Sun Oct 26 07:28:06 2008//Tnetbsd-5-1-2-RELEASE
+/shlib_version/1.204.4.1/Tue Jul 14 19:48:04 2009//Tnetbsd-5-1-2-RELEASE
+D/arch////
+D/atomic////
+D/citrus////
+D/compat////
+D/compat-43////
+D/db////
+D/dlfcn////
+D/gdtoa////
+D/gen////
+D/gmon////
+D/hash////
+D/iconv////
+D/include////
+D/inet////
+D/isc////
+D/locale////
+D/md////
+D/misc////
+D/nameser////
+D/net////
+D/nls////
+D/quad////
+D/regex////
+D/resolv////
+D/rpc////
+D/softfloat////
+D/ssp////
+D/stdio////
+D/stdlib////
+D/string////
+D/sys////
+D/termios////
+D/thread-stub////
+D/time////
+D/uuid////
+D/yp////
+D

@@ -1,0 +1,10 @@
+/DEFS.h/1.1/Thu Jun  6 20:31:20 2002//Tnetbsd-5-1-2-RELEASE
+/Makefile.inc/1.8/Sun Oct 26 07:43:07 2008//Tnetbsd-5-1-2-RELEASE
+/SYS.h/1.6/Sun Nov 18 13:25:39 2007//Tnetbsd-5-1-2-RELEASE
+D/gdtoa////
+D/gen////
+D/net////
+D/stdlib////
+D/string////
+D/sys////
+D

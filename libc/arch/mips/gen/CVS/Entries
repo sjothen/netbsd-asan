@@ -1,0 +1,23 @@
+/Makefile.inc/1.28/Mon Jul  3 12:58:55 2006//Tnetbsd-5-1-2-RELEASE
+/_lwp.c/1.5/Mon Apr 28 20:22:56 2008//Tnetbsd-5-1-2-RELEASE
+/_resumecontext.S/1.5/Mon Apr 28 20:22:56 2008//Tnetbsd-5-1-2-RELEASE
+/_setjmp.S/1.20/Fri Oct  7 17:16:40 2005//Tnetbsd-5-1-2-RELEASE
+/cacheflush.c/1.4/Mon Apr 28 20:22:56 2008//Tnetbsd-5-1-2-RELEASE
+/fabs.S/1.7/Thu Aug  7 16:42:15 2003//Tnetbsd-5-1-2-RELEASE
+/flt_rounds.c/1.5/Sat Dec 24 23:10:08 2005//Tnetbsd-5-1-2-RELEASE
+/fpgetmask.c/1.5/Sat Dec 24 23:10:08 2005//Tnetbsd-5-1-2-RELEASE
+/fpgetround.c/1.5/Sat Dec 24 23:10:08 2005//Tnetbsd-5-1-2-RELEASE
+/fpgetsticky.c/1.5/Sat Dec 24 23:10:08 2005//Tnetbsd-5-1-2-RELEASE
+/fpsetmask.c/1.5/Sat Dec 24 23:10:08 2005//Tnetbsd-5-1-2-RELEASE
+/fpsetround.c/1.5/Sat Dec 24 23:10:08 2005//Tnetbsd-5-1-2-RELEASE
+/fpsetsticky.c/1.5/Sat Dec 24 23:10:08 2005//Tnetbsd-5-1-2-RELEASE
+/ldexp.S/1.8/Thu Aug  7 16:42:15 2003//Tnetbsd-5-1-2-RELEASE
+/longjmp.c/1.2/Mon Apr 28 20:22:56 2008//Tnetbsd-5-1-2-RELEASE
+/makecontext.c/1.4/Mon Apr 28 20:22:56 2008//Tnetbsd-5-1-2-RELEASE
+/modf.S/1.10/Thu Aug  7 16:42:15 2003//Tnetbsd-5-1-2-RELEASE
+/nanf.c/1.3/Fri Apr 15 22:39:11 2005//Tnetbsd-5-1-2-RELEASE
+/resumecontext.c/1.4/Mon Apr 28 20:22:56 2008//Tnetbsd-5-1-2-RELEASE
+/setjmp.S/1.17/Sat Sep 17 11:49:39 2005//Tnetbsd-5-1-2-RELEASE
+/sigsetjmp.S/1.8/Sat Sep 17 11:49:39 2005//Tnetbsd-5-1-2-RELEASE
+/swapcontext.S/1.3/Mon Apr 28 20:22:56 2008//Tnetbsd-5-1-2-RELEASE
+D

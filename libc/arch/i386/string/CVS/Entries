@@ -1,0 +1,9 @@
+/Makefile.inc/1.3/Fri Aug  1 17:03:48 2003//Tnetbsd-5-1-2-RELEASE
+/bcmp.S/1.9/Mon Nov 12 18:41:59 2007//Tnetbsd-5-1-2-RELEASE
+/bcopy.S/1.15/Wed Feb  9 18:15:16 2005//Tnetbsd-5-1-2-RELEASE
+/bzero.S/1.12/Wed Feb  9 18:15:16 2005//Tnetbsd-5-1-2-RELEASE
+/index.S/1.14/Wed Feb  9 18:15:16 2005//Tnetbsd-5-1-2-RELEASE
+/rindex.S/1.14/Wed Feb  9 18:15:16 2005//Tnetbsd-5-1-2-RELEASE
+/strncmp.S/1.14/Wed Aug  3 22:59:50 2005//Tnetbsd-5-1-2-RELEASE
+/swab.S/1.13/Mon Nov 12 18:42:00 2007//Tnetbsd-5-1-2-RELEASE
+D

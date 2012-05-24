@@ -1,0 +1,5 @@
+/Makefile.inc/1.2/Fri Jul  7 06:59:04 2006//Tnetbsd-5-1-2-RELEASE
+/compat___semctl.S/1.2/Mon Apr 28 20:22:58 2008//Tnetbsd-5-1-2-RELEASE
+/compat_msgctl.S/1.1/Fri Jul  7 06:59:04 2006//Tnetbsd-5-1-2-RELEASE
+/compat_shmctl.S/1.2/Mon Apr 28 20:22:58 2008//Tnetbsd-5-1-2-RELEASE
+D

@@ -1,0 +1,27 @@
+/Makefile.inc/1.14/Thu Mar  4 23:42:39 2004//Tnetbsd-5-1-2-RELEASE
+/__longjmp14.c/1.4/Mon Apr 28 20:22:57 2008//Tnetbsd-5-1-2-RELEASE
+/__setjmp14.S/1.10/Tue May  3 04:37:33 2005//Tnetbsd-5-1-2-RELEASE
+/__sigsetjmp14.S/1.4/Thu Aug  7 16:42:31 2003//Tnetbsd-5-1-2-RELEASE
+/_setjmp.S/1.9/Thu Aug  7 16:42:31 2003//Tnetbsd-5-1-2-RELEASE
+/alloca.S/1.3/Thu Aug  7 16:42:31 2003//Tnetbsd-5-1-2-RELEASE
+/byte_swap_2.S/1.3/Thu Aug  7 16:42:31 2003//Tnetbsd-5-1-2-RELEASE
+/byte_swap_4.S/1.4/Thu Aug  7 16:42:31 2003//Tnetbsd-5-1-2-RELEASE
+/fabs.S/1.3/Thu Aug  7 16:42:31 2003//Tnetbsd-5-1-2-RELEASE
+/fpclassifyd.c/1.3/Mon Apr 28 20:22:57 2008//Tnetbsd-5-1-2-RELEASE
+/fpclassifyf.c/1.3/Mon Apr 28 20:22:57 2008//Tnetbsd-5-1-2-RELEASE
+/frexp.c/1.4/Thu Aug  7 16:42:31 2003//Tnetbsd-5-1-2-RELEASE
+/infinity.c/1.8/Tue Feb 19 21:50:01 2002//Tnetbsd-5-1-2-RELEASE
+/infinityf.c/1.1/Sat Oct 25 22:31:20 2003//Tnetbsd-5-1-2-RELEASE
+/infinityl.c/1.2/Sun Jun 12 05:21:27 2005//Tnetbsd-5-1-2-RELEASE
+/isfinited.c/1.5/Mon Apr 28 20:22:57 2008//Tnetbsd-5-1-2-RELEASE
+/isfinitef.c/1.4/Mon Apr 28 20:22:57 2008//Tnetbsd-5-1-2-RELEASE
+/isinf.c/1.8/Thu Mar  4 23:42:39 2004//Tnetbsd-5-1-2-RELEASE
+/isnan.c/1.3/Thu Mar  4 23:42:39 2004//Tnetbsd-5-1-2-RELEASE
+/ldexp.S/1.6/Thu Aug  7 16:42:31 2003//Tnetbsd-5-1-2-RELEASE
+/makecontext.c/1.3/Mon Apr 28 20:22:57 2008//Tnetbsd-5-1-2-RELEASE
+/modf.S/1.4/Thu Aug  7 16:42:31 2003//Tnetbsd-5-1-2-RELEASE
+/resumecontext.c/1.3/Mon Apr 28 20:22:57 2008//Tnetbsd-5-1-2-RELEASE
+/signbitd.c/1.2/Mon Apr 28 20:22:58 2008//Tnetbsd-5-1-2-RELEASE
+/signbitf.c/1.2/Mon Apr 28 20:22:58 2008//Tnetbsd-5-1-2-RELEASE
+/swapcontext.S/1.3/Mon Apr 28 20:22:58 2008//Tnetbsd-5-1-2-RELEASE
+D

@@ -1,0 +1,24 @@
+/C.msg/1.14/Tue Oct 31 00:38:07 2006//Tnetbsd-5-1-2-RELEASE
+/Makefile.inc/1.8.60.1/Thu Jan 15 03:24:08 2009//Tnetbsd-5-1-2-RELEASE
+/Pig.msg/1.5/Fri Mar 10 13:59:01 2000//Tnetbsd-5-1-2-RELEASE
+/_catclose.c/1.7/Tue Sep 13 01:44:09 2005//Tnetbsd-5-1-2-RELEASE
+/_catgets.c/1.8/Tue Sep 13 01:44:10 2005//Tnetbsd-5-1-2-RELEASE
+/_catopen.c/1.7/Tue Sep 13 01:44:10 2005//Tnetbsd-5-1-2-RELEASE
+/ca.msg/1.5/Tue Feb 21 08:51:20 2006//Tnetbsd-5-1-2-RELEASE
+/catclose.3/1.12/Sat Jul 26 19:24:49 2003//Tnetbsd-5-1-2-RELEASE
+/catclose.c/1.13/Mon Apr 28 20:23:00 2008//Tnetbsd-5-1-2-RELEASE
+/catgets.3/1.16/Sat Jul 26 19:24:49 2003//Tnetbsd-5-1-2-RELEASE
+/catgets.c/1.18/Mon Apr 28 20:23:00 2008//Tnetbsd-5-1-2-RELEASE
+/catopen.3/1.14/Sat Jul 26 19:24:49 2003//Tnetbsd-5-1-2-RELEASE
+/catopen.c/1.25.6.1/Thu Jan 15 03:24:08 2009//Tnetbsd-5-1-2-RELEASE
+/cs.msg/1.10/Tue Feb 21 15:20:03 2006//Tnetbsd-5-1-2-RELEASE
+/de.msg/1.14/Tue Feb 21 14:02:22 2006//Tnetbsd-5-1-2-RELEASE
+/es.msg/1.8/Thu Apr  3 10:47:27 2008//Tnetbsd-5-1-2-RELEASE
+/fi.msg/1.2/Fri Jan 21 16:18:05 2000//Tnetbsd-5-1-2-RELEASE
+/fr.msg/1.6/Mon Jan  3 22:00:37 2005//Tnetbsd-5-1-2-RELEASE
+/nl.msg/1.4/Tue Feb 21 16:00:30 2006//Tnetbsd-5-1-2-RELEASE
+/no.msg/1.1/Mon Apr 28 08:49:32 1997//Tnetbsd-5-1-2-RELEASE
+/pl.msg/1.1/Sun Sep  2 13:13:42 2001//Tnetbsd-5-1-2-RELEASE
+/sk.msg/1.4/Tue Feb 21 15:20:03 2006//Tnetbsd-5-1-2-RELEASE
+/sv.msg/1.4/Wed Mar 15 16:13:00 2006//Tnetbsd-5-1-2-RELEASE
+D

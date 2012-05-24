@@ -1,0 +1,19 @@
+/Makefile.inc/1.4/Sun Jan 28 02:14:05 2007//Tnetbsd-5-1-2-RELEASE
+/__dn_comp.c/1.5/Wed Jan 17 16:39:20 2007//Tnetbsd-5-1-2-RELEASE
+/__res_close.c/1.4/Tue Sep 13 01:44:10 2005//Tnetbsd-5-1-2-RELEASE
+/__res_send.c/1.4/Tue Sep 13 01:44:10 2005//Tnetbsd-5-1-2-RELEASE
+/h_errno.c/1.3/Sat Jun 21 20:41:48 2008//Tnetbsd-5-1-2-RELEASE
+/herror.c/1.7.14.1/Sun Jan  9 20:43:29 2011//Tnetbsd-5-1-2-RELEASE
+/mtctxres.c/1.4/Fri Mar 30 20:40:52 2007//Tnetbsd-5-1-2-RELEASE
+/res_comp.c/1.9.14.1/Sun Jan  9 20:43:29 2011//Tnetbsd-5-1-2-RELEASE
+/res_compat.c/1.2/Mon Apr 28 20:23:00 2008//Tnetbsd-5-1-2-RELEASE
+/res_data.c/1.11.14.1/Sun Jan  9 20:43:29 2011//Tnetbsd-5-1-2-RELEASE
+/res_debug.c/1.10.14.1/Sun Jan  9 20:43:29 2011//Tnetbsd-5-1-2-RELEASE
+/res_debug.h/1.1.1.3.28.1/Sun Jan  9 20:43:29 2011//Tnetbsd-5-1-2-RELEASE
+/res_init.c/1.15.12.1/Sun Jan  9 20:43:29 2011//Tnetbsd-5-1-2-RELEASE
+/res_mkquery.c/1.10.14.1/Sun Jan  9 20:43:29 2011//Tnetbsd-5-1-2-RELEASE
+/res_private.h/1.1.1.3.28.1/Sun Jan  9 20:43:29 2011//Tnetbsd-5-1-2-RELEASE
+/res_query.c/1.11.14.1/Sun Jan  9 20:43:29 2011//Tnetbsd-5-1-2-RELEASE
+/res_send.c/1.15.12.1/Sun Jan  9 20:43:29 2011//Tnetbsd-5-1-2-RELEASE
+/res_state.c/1.7/Mon Apr 28 20:23:00 2008//Tnetbsd-5-1-2-RELEASE
+D
