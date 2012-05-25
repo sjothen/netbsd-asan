@@ -10,9 +10,17 @@ pselect(int nfds, fd_set * restrict readfds, fd_set * restrict writefds,
 	fd_set * restrict exceptfds, struct timeval * restrict timeout,
 	const sigset_t * restrict sigmask)
 {
-	int ret = _asan_select(nfds, readfds, writefds, exceptfds, timeout, sigmask);
+	int ret = _asan_pselect(nfds, readfds, writefds, exceptfds, timeout, sigmask);
 
-	if(ret >= 0) {
+	if(ret > 0) {
+                if(readfds != NULL)
+                        ASAN_WRITE_RANGE(readfds, sizeof(*readfds));
+
+                if(writefds != NULL)
+                        ASAN_WRITE_RANGE(writefds, sizeof(*writefds));
+
+                if(exceptfds != NULL)
+                        ASAN_WRITE_RANGE(exceptfds, sizeof(*exceptfds));
 	}
 
 	return ret;

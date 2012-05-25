@@ -11,7 +11,15 @@ select(int nfds, fd_set * restrict readfds, fd_set * restrict writefds,
 {
 	int ret = _asan_select(nfds, readfds, writefds, exceptfds, timeout);
 
-	if(ret >= 0) {
+	if(ret > 0) {
+		if(readfds != NULL)
+			ASAN_WRITE_RANGE(readfds, sizeof(*readfds));
+
+		if(writefds != NULL)
+			ASAN_WRITE_RANGE(writefds, sizeof(*writefds));
+
+		if(exceptfds != NULL)
+			ASAN_WRITE_RANGE(exceptfds, sizeof(*exceptfds));
 	}
 
 	return ret;
