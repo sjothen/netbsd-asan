@@ -11,7 +11,7 @@ _sys_accept(int s, struct sockaddr * restrict addr,
 {
 	int ret = _asan_sys_accept(s, addr, addrlen);
 
-	if(ret != -1)
+	if(ret != -1 && addr != NULL)
 		ASAN_WRITE_RANGE(addr, *addrlen);
 
 	return ret;
