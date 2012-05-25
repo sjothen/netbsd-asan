@@ -141,10 +141,12 @@ NOERR=	getegid.S geteuid.S getgid.S getpid.S getppid.S getuid.S \
 
 PSEUDONOERR=	_exit.S
 
+INTERCEPTED_SYSCALLS= read getgroups getsockname
+
 .ifdef LIBC_ASAN
-	CPPFLAGS.read.S+= -DINTERCEPTED
-	CPPFLAGS.getgroups.S+= -DINTERCEPTED
-	CPPFLAGS.getsockname.S+= -DINTERCEPTED
+. for stub in ${INTERCEPTED_SYSCALLS}
+   CPPFLAGS.{stub}.S+= -DINTERCEPTED
+. endfor
 .endif
 
 SRCS+=		${ASM} ${WEAKASM} ${NOERR} ${PSEUDONOERR} ${ASM_GLUE}
