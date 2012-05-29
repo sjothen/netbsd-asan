@@ -1,14 +1,14 @@
 #define _NETBSD_SOURCE
 #include <sys/select.h>
 
-int select(int, fd_set * restrict, fd_set * restrict,
-	fd_set * restrict, struct timeval * restrict);
-int _asan_select(int, fd_set * restrict, fd_set * restrict,
-	fd_set * restrict, struct timeval * restrict);
+int select(int, fd_set * __restrict, fd_set * __restrict,
+	fd_set * __restrict, struct timeval * __restrict);
+int _asan_select(int, fd_set * __restrict, fd_set * __restrict,
+	fd_set * __restrict, struct timeval * __restrict);
 
 int
-select(int nfds, fd_set * restrict readfds, fd_set * restrict writefds,
-	fd_set * restrict exceptfds, struct timeval * restrict timeout)
+select(int nfds, fd_set * __restrict readfds, fd_set * __restrict writefds,
+	fd_set * __restrict exceptfds, struct timeval * __restrict timeout)
 {
 	int ret = _asan_select(nfds, readfds, writefds, exceptfds, timeout);
 

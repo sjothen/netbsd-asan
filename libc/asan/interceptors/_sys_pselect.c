@@ -1,15 +1,15 @@
 #define _NETBSD_SOURCE
 #include <sys/select.h>
 
-int pselect(int, fd_set * restrict, fd_set * restrict,
-	fd_set * restrict, struct timeval * restrict, const sigset_t * restrict);
-int _asan_pselect(int, fd_set * restrict, fd_set * restrict,
-	fd_set * restrict, struct timeval * restrict, const sigset_t * restrict);
+int pselect(int, fd_set * __restrict, fd_set * __restrict,
+	fd_set * __restrict, struct timeval * __restrict, const sigset_t * __restrict);
+int _asan_pselect(int, fd_set * __restrict, fd_set * __restrict,
+	fd_set * __restrict, struct timeval * __restrict, const sigset_t * __restrict);
 
 int
-pselect(int nfds, fd_set * restrict readfds, fd_set * restrict writefds,
-	fd_set * restrict exceptfds, struct timeval * restrict timeout,
-	const sigset_t * restrict sigmask)
+pselect(int nfds, fd_set * __restrict readfds, fd_set * __restrict writefds,
+	fd_set * __restrict exceptfds, struct timeval * __restrict timeout,
+	const sigset_t * __restrict sigmask)
 {
 	int ret = _asan_pselect(nfds, readfds, writefds, exceptfds, timeout, sigmask);
 

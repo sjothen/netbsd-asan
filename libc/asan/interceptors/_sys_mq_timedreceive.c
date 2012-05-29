@@ -1,17 +1,17 @@
 #include <mqueue.h>
 #include <time.h>
 
-ssize_t _sys_mq_timedreceive(mqd_t mqdes, char *restrict msg_ptr, size_t msg_len,
-	unsigned *restrict msg_prio,
-	const struct timespec *restrict abs_timeout);
-ssize_t _asan_sys_mq_timedreceive(mqd_t mqdes, char *restrict msg_ptr, size_t msg_len,
-	unsigned *restrict msg_prio,
-	const struct timespec *restrict abs_timeout);
+ssize_t _sys_mq_timedreceive(mqd_t mqdes, char *__restrict msg_ptr, size_t msg_len,
+	unsigned *__restrict msg_prio,
+	const struct timespec *__restrict abs_timeout);
+ssize_t _asan_sys_mq_timedreceive(mqd_t mqdes, char *__restrict msg_ptr, size_t msg_len,
+	unsigned *__restrict msg_prio,
+	const struct timespec *__restrict abs_timeout);
 
 ssize_t
-_sys_mq_timedreceive(mqd_t mqdes, char *restrict msg_ptr, size_t msg_len,
-	unsigned *restrict msg_prio,
-	const struct timespec *restrict abs_timeout)
+_sys_mq_timedreceive(mqd_t mqdes, char *__restrict msg_ptr, size_t msg_len,
+	unsigned *__restrict msg_prio,
+	const struct timespec *__restrict abs_timeout)
 {
 	ssize_t ret = _asan_sys_mq_timedreceive(mqdes, msg_ptr, msg_len,
 			msg_prio, abs_timeout);

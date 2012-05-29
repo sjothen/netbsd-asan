@@ -1,12 +1,12 @@
 #include <sys/socket.h>
 
-int getpeername(int s, struct sockaddr * restrict, socklen_t * restrict);
-int _asan_getpeername(int s, struct sockaddr * restrict,
-	socklen_t * restrict);
+int getpeername(int s, struct sockaddr * __restrict, socklen_t * __restrict);
+int _asan_getpeername(int s, struct sockaddr * __restrict,
+	socklen_t * __restrict);
 
 int
-getpeername(int s, struct sockaddr * restrict name,
-	socklen_t * restrict namelen)
+getpeername(int s, struct sockaddr * __restrict name,
+	socklen_t * __restrict namelen)
 {
 	int ret = _asan_getpeername(s, name, namelen);
 

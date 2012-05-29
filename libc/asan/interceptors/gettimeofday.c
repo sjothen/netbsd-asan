@@ -1,10 +1,10 @@
 #include <sys/time.h>
 
-int gettimeofday(struct timeval * restrict, void * restrict);
-int _asan_gettimeofday(struct timeval * restrict, void * restrict);
+int gettimeofday(struct timeval * __restrict, void * __restrict);
+int _asan_gettimeofday(struct timeval * __restrict, void * __restrict);
 
 int
-gettimeofday(struct timeval * restrict tp, void * restrict tzp)
+gettimeofday(struct timeval * __restrict tp, void * __restrict tzp)
 {
 	int ret = _asan_gettimeofday(tp, tzp);
 

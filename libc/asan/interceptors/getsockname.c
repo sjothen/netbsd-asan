@@ -1,12 +1,12 @@
 #include <sys/socket.h>
 
-int getsockname(int s, struct sockaddr * restrict, socklen_t * restrict);
-int _asan_getsockname(int s, struct sockaddr * restrict,
-	socklen_t * restrict);
+int getsockname(int s, struct sockaddr * __restrict, socklen_t * __restrict);
+int _asan_getsockname(int s, struct sockaddr * __restrict,
+	socklen_t * __restrict);
 
 int
-getsockname(int s, struct sockaddr * restrict name,
-	socklen_t * restrict namelen)
+getsockname(int s, struct sockaddr * __restrict name,
+	socklen_t * __restrict namelen)
 {
 	int ret = _asan_getsockname(s, name, namelen);
 

@@ -1,13 +1,13 @@
 #include <sys/time.h>
 
-int setitimer(int, const struct itimerval * restrict,
-	struct itimerval * restrict)
-int _asan_setitimer(int, const struct itimerval * restrict,
-	struct itimerval * restrict)
+int setitimer(int, const struct itimerval * __restrict,
+	struct itimerval * __restrict)
+int _asan_setitimer(int, const struct itimerval * __restrict,
+	struct itimerval * __restrict)
 
 int
-setitimer(int which, const struct itimerval * restrict value,
-	struct itimerval * restrict ovalue)
+setitimer(int which, const struct itimerval * __restrict value,
+	struct itimerval * __restrict ovalue)
 {
 	int ret = _asan_setitimer(which, value, ovalue);
 

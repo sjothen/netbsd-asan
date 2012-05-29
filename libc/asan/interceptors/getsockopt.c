@@ -1,11 +1,11 @@
 #include <sys/socket.h>
 
-int getsockopt(int, int, int, void * restrict, socklen_t * restrict);
-int _asan_getsockopt(int, int, int, void * restrict, socklen_t * restrict);
+int getsockopt(int, int, int, void * __restrict, socklen_t * __restrict);
+int _asan_getsockopt(int, int, int, void * __restrict, socklen_t * __restrict);
 
 int
-getsockopt(int s, int level, int optname, void * restrict optval,
-	socklen_t * restrict optlen)
+getsockopt(int s, int level, int optname, void * __restrict optval,
+	socklen_t * __restrict optlen)
 {
 	int ret = _asan_getsockopt(s, level, optname, optval, optlen);
 

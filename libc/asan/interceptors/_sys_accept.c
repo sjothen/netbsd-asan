@@ -1,13 +1,13 @@
 #include <sys/socket.h>
 
-int _sys_accept(int, struct sockaddr * restrict,
-	socklen_t * restrict);
-int _asan_sys_accept(int, struct sockaddr * restrict,
-	socklen_t * restrict);
+int _sys_accept(int, struct sockaddr * __restrict,
+	socklen_t * __restrict);
+int _asan_sys_accept(int, struct sockaddr * __restrict,
+	socklen_t * __restrict);
 
 int
-_sys_accept(int s, struct sockaddr * restrict addr,
-	socklen_t * restrict addrlen)
+_sys_accept(int s, struct sockaddr * __restrict addr,
+	socklen_t * __restrict addrlen)
 {
 	int ret = _asan_sys_accept(s, addr, addrlen);
 
