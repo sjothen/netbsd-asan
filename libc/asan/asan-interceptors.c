@@ -10,6 +10,6 @@ touch_mem(char *p)
 {
 	volatile char *vp = p;
 	
-	while(*p++ != '\0')
+	while(*vp++ != '\0')
 		;
 }
