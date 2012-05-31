@@ -1,3 +1,4 @@
+#include "../asan-interceptors.h"
 #include <unistd.h>
 
 int rmdir(const char *);
@@ -9,8 +10,7 @@ rmdir(const char *path)
 	int ret = _asan_rmdir(path);
 
 	if(ret == 0) {
-		int sz = strlen(path);
-		ASAN_READ_RANGE(path, sz+1);
+		touch_mem(path);
 	}
 
 	return ret;

@@ -1,3 +1,4 @@
+#include "../asan-interceptors.h"
 #include <sys/param.h>
 #include <sys/mount.h>
 
@@ -10,8 +11,7 @@ unmount(const char *path, int flags)
 	int ret = _asan_unmount(path, flags);
 
 	if(ret == 0) {
-		size_t sz = strlen(path);
-		ASAN_READ_RANGE(path, sz+1);
+		touch_mem(path);
 	}
 
 	return ret;
