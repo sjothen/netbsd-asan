@@ -9,8 +9,9 @@ _sys_readlink(const char * __restrict path, char * __restrict buf,
 {
 	ssize_t ret = _asan_sys_readlink(path, buf, bufsiz);
 	
-	if(ret >= 0)
+	if(ret >= 0) {
 		ASAN_WRITE_RANGE(buf, ret);
+	}
 
 	return ret;
 }
