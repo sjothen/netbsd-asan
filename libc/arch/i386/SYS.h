@@ -99,7 +99,7 @@
 
 #define _SYSCALL_NOERROR(x,y)						\
 #ifndef INTERCEPTED							\
-	ENTRY(_asan ## x);						\
+	ENTRY(_asan_ ## x);						\
 #else									\
 	ENTRY(x);							\
 #endif									\
