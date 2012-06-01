@@ -12,8 +12,10 @@ __fhstatvfs140(const void *fhp, size_t fh_size,
 {
 	int ret = _asan__fhstatvfs140(fhp, fh_size, buf, flags);
 
-	if(ret == 0)
+	if(ret == 0) {
+		ASAN_READ_RANGE(fhp, fh_size);
 		ASAN_WRITE_RANGE(buf, sizeof(struct statvfs));
+	}
 
 	return ret;
 }

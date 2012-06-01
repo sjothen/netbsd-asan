@@ -8,8 +8,12 @@ _sys_nanosleep(const struct timespec *rqtp, struct timespec *rmtp)
 {
 	int ret = _asan_sys_nanosleep(rqtp, rmtp);
 
-	if(ret != -1 && rmtp != NULL)
-		ASAN_WRITE_RANGE(rmtp, sizeof(struct timespec));
+	if(ret != -1) {
+		if(rmtp != NULL)
+			ASAN_WRITE_RANGE(rmtp, sizeof(struct timespec));
+
+		ASAN_READ_RANGE(rqtp, sizeof(struct timespec));
+	}
 
 	return ret;
 }

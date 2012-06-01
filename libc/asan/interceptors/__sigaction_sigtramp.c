@@ -1,3 +1,4 @@
+#include "../asan-interceptors.h"
 #include <sys/signal.h>
 
 int __sigaction_sigtramp(int, const struct sigaction *,
@@ -13,6 +14,7 @@ __sigaction_sigtramp(int signum, const struct sigaction *nsa,
 			tramp, vers);
 
 	if(ret == 0) {
+		ASAN_READ_RANGE(nsa, sizeof(struct sigaction));
 		if(osa != NULL)
 			ASAN_WRITE_RANGE(osa, sizeof(struct sigaction));
 	}

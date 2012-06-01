@@ -1,3 +1,4 @@
+#include "../asan-interceptors.h"
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/extattr.h>
@@ -14,8 +15,12 @@ extattr_get_file(const char *path, int attrnamespace, const char *attrname,
 	ssize_t ret = _asan_extattr_get_file(path, attrnamespace, attrname,
 			data, nbytes);
 
-	if(ret != -1 && data != NULL)
-		ASAN_WRITE_RANGE(data, ret);
+	if(ret != -1) {
+		touch_mem(path);
+		touch_mem(attrname);
+		if(data != NULL)
+			ASAN_WRITE_RANGE(data, ret);
+	}
 
 	return ret;
 }

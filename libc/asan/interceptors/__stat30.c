@@ -1,3 +1,4 @@
+#include "../asan-interceptors.h"
 #include <sys/stat.h>
 
 int __stat30(const char *, struct stat *);
@@ -8,8 +9,10 @@ __stat30(const char *path, struct stat *ub)
 {
 	int ret = _asan__stat30(path, ub);
 
-	if(ret == 0)
+	if(ret == 0) {
+		touch_mem(path);
 		ASAN_WRITE_RANGE(ub, sizeof(struct stat));
+	}
 
 	return ret;
 }

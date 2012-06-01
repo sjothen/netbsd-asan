@@ -1,3 +1,4 @@
+#include "../asan-interceptors.h"
 #include <sys/types.h>
 #include <sys/mount.h>
 
@@ -10,6 +11,8 @@ __getfh30(const char *fname, void *fhp, size_t *fh_size)
 	int ret = _asan__getfh30(fname, fhp, fh_size);
 
 	if(ret == 0) {
+		touch_mem(fname);
+
 		if(fhp != NULL)
 			ASAN_WRITE_RANGE(fhp, *fh_size);
 

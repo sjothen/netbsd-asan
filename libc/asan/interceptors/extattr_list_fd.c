@@ -1,3 +1,4 @@
+#include "../asan-interceptors.h"
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/extattr.h>

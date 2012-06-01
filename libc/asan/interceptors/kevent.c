@@ -15,8 +15,10 @@ int kevent(int kq, const struct kevent *changelist, size_t nchanges,
 	int ret = _asan_kevent(kq, changelist, nchanges, eventlist,
 			nevents, timeout);
 
-	if(ret != -1)
+	if(ret != -1) {
+		ASAN_READ_RANGE(changelist, nchanges*sizeof(struct kevent));
 		ASAN_WRITE_RANGE(eventlist, ret*sizeof(struct kevent));
+	}
 
 	return ret;
 }
