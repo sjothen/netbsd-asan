@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include <signal.h>
 
 int _sys___sigprocmask14(int, const sigset_t *,

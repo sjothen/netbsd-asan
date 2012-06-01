@@ -1,4 +1,6 @@
 #include <sys/ksem.h>
+#define _LIBC
+#include <sys/types.h>
 
 int _ksem_init(unsigned int, semid_t *);
 int _asan__ksem_init(unsigned int, semid_t *);

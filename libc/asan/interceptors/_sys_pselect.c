@@ -2,13 +2,15 @@
 #include <sys/select.h>
 
 int pselect(int, fd_set * __restrict, fd_set * __restrict,
-	fd_set * __restrict, struct timeval * __restrict, const sigset_t * __restrict);
+	fd_set * __restrict, const struct timespec * __restrict,
+	const sigset_t * __restrict);
 int _asan_pselect(int, fd_set * __restrict, fd_set * __restrict,
-	fd_set * __restrict, struct timeval * __restrict, const sigset_t * __restrict);
+	fd_set * __restrict, const struct timespec * __restrict,
+	const sigset_t * __restrict);
 
 int
 pselect(int nfds, fd_set * __restrict readfds, fd_set * __restrict writefds,
-	fd_set * __restrict exceptfds, struct timeval * __restrict timeout,
+	fd_set * __restrict exceptfds, const struct timespec * __restrict timeout,
 	const sigset_t * __restrict sigmask)
 {
 	int ret = _asan_pselect(nfds, readfds, writefds, exceptfds, timeout, sigmask);

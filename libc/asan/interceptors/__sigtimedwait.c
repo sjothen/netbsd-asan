@@ -1,4 +1,5 @@
 #include <signal.h>
+#include <time.h>
 
 int __sigtimedwait(const sigset_t *, siginfo_t *,
 		struct timespec *);

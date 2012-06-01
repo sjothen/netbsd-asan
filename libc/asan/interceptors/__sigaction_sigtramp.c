@@ -1,4 +1,5 @@
 #include "../asan-interceptors.h"
+#include <unistd.h>
 #include <sys/signal.h>
 
 int __sigaction_sigtramp(int, const struct sigaction *,

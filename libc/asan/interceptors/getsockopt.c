@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include <sys/socket.h>
 
 int getsockopt(int, int, int, void * __restrict, socklen_t * __restrict);

@@ -6,9 +6,9 @@
  * byte.
  */
 void
-touch_mem(char *p)
+touch_mem(const char *p)
 {
-	volatile char *vp = p;
+	volatile const char *vp = p;
 	
 	while(*vp++ != '\0')
 		;

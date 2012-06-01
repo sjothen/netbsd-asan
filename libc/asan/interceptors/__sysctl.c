@@ -14,8 +14,6 @@ __sysctl(const int *name, u_int namelen, void *old,
 	int ret = _asan___sysctl(name, namelen, old, oldlenp,
 			new, newlen);
 
-	touch_mem(name);
-
 	if(ret == 0 || (ret == -1 && errno == ENOMEM)) {
 		if(old != NULL)
 			ASAN_WRITE_RANGE(old, *oldlenp);
@@ -24,6 +22,8 @@ __sysctl(const int *name, u_int namelen, void *old,
 
 		if(new != NULL)
 			ASAN_READ_RANGE(new, newlen);
+
+		ASAN_READ_RANGE(name, namelen);
 	}
 
 	return ret;

@@ -1,9 +1,9 @@
 #include <sys/time.h>
 
 int setitimer(int, const struct itimerval * __restrict,
-	struct itimerval * __restrict)
+	struct itimerval * __restrict);
 int _asan_setitimer(int, const struct itimerval * __restrict,
-	struct itimerval * __restrict)
+	struct itimerval * __restrict);
 
 int
 setitimer(int which, const struct itimerval * __restrict value,

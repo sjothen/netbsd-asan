@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include <sys/sched.h>
 
 int _sys__sched_getparam(pid_t, lwpid_t, int *,

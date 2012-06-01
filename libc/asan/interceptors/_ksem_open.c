@@ -1,4 +1,6 @@
-#include <sys/kern.h>
+#include <sys/ksem.h>
+#define _LIBC
+#include <sys/types.h>
 
 int _ksem_open(const char *name, int oflag, mode_t mode,
 		unsigned int value, semid_t *idp);

@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include <sys/pmc.h>
 
 int pmc_get_info(int, int, void *);

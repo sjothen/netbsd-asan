@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include <sys/sa.h>
 
 int sa_register(sa_upcall_t, sa_upcall_t *, int,
