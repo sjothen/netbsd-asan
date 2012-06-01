@@ -1,16 +1,17 @@
+#include <unistd.h>
 #include <sys/types.h>
 #include <sys/extattr.h>
 
-ssize_t extattr_get_fd(const char *path, int attrnamespace,
-	const char *attrname, void *data, size_t nbytes);
-ssize_t _asan_extattr_get_fd(const char *path, int attrnamespace,
-	const char *attrname, void *data, size_t nbytes);
+ssize_t extattr_get_fd(int, int,
+	const char *, void *, size_t);
+ssize_t _asan_extattr_get_fd(int, int,
+	const char *, void *, size_t);
 
 ssize_t
-extattr_get_fd(const char *path, int attrnamespace, const char *attrname,
+extattr_get_fd(int fd, int attrnamespace, const char *attrname,
 	void *data, size_t nbytes)
 {
-	ssize_t ret = _asan_extattr_get_fd(path, attrnamespace, attrname,
+	ssize_t ret = _asan_extattr_get_fd(fd, attrnamespace, attrname,
 			data, nbytes);
 
 	if(ret != -1 && data != NULL)
