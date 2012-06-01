@@ -2,14 +2,14 @@
 
 int __sigaltstack14(const struct sigaltstack *,
 		struct sigaltstack *);
-int _asan__sigaltstack14(const struct sigaltstack *,
+int _asan___sigaltstack14(const struct sigaltstack *,
 		struct sigaltstack *);
 
 int
 __sigaltstack14(const struct sigaltstack *nss,
 		struct sigaltstack *oss)
 {
-	int ret = _asan__sigaltstack14(nss, oss);
+	int ret = _asan___sigaltstack14(nss, oss);
 
 	if(ret == 0) {
 		if(oss != NULL)

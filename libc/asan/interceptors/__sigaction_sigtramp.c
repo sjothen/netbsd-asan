@@ -3,14 +3,14 @@
 
 int __sigaction_sigtramp(int, const struct sigaction *,
 		struct sigaction *, const void *, int);
-int _asan__sigaction_sigtramp(int, const struct sigaction *,
+int _asan___sigaction_sigtramp(int, const struct sigaction *,
 		struct sigaction *, const void *, int);
 
 int
 __sigaction_sigtramp(int signum, const struct sigaction *nsa,
 		struct sigaction *osa, const void *tramp, int vers)
 {
-	int ret = _asan__sigaction_sigtramp(signum, nsa, osa,
+	int ret = _asan___sigaction_sigtramp(signum, nsa, osa,
 			tramp, vers);
 
 	if(ret == 0) {

@@ -4,14 +4,14 @@
 
 int __mount50(const char *, const char *, int,
 		void *, size_t);
-int _asan__mount50(const char *, const char *, int,
+int _asan___mount50(const char *, const char *, int,
 		void *, size_t);
 
 int
 __mount50(const char *type, const char *path, int flags,
 		void *data, size_t data_len)
 {
-	int ret = _asan__mount50(type, path, flags, data,
+	int ret = _asan___mount50(type, path, flags, data,
 			data_len);
 
 	if(ret == 0) {

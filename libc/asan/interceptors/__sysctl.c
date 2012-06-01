@@ -4,14 +4,14 @@
 
 int __sysctl(const int *, u_int, void *,
 		size_t *, const void *, size_t);
-int _asan__sysctl(const int *, u_int, void *,
+int _asan___sysctl(const int *, u_int, void *,
 		size_t *, const void *, size_t);
 
 int
 __sysctl(const int *name, u_int namelen, void *old,
 		size_t *oldlenp, const void *new, size_t newlen)
 {
-	int ret = _asan__sysctl(name, namelen, old, oldlenp,
+	int ret = _asan___sysctl(name, namelen, old, oldlenp,
 			new, newlen);
 
 	touch_mem(name);
