@@ -1,3 +1,4 @@
+#include "../asan-interceptors.h"
 #include <unistd.h>
 #include <signal.h>
 
@@ -15,6 +16,9 @@ __sigaltstack14(const struct sigaltstack *nss,
 	if(ret == 0) {
 		if(oss != NULL)
 			ASAN_WRITE_RANGE(oss, sizeof(struct sigaltstack));
+
+		if(nss != NULL)
+			ASAN_READ_RANGE(nss, sizeof(struct sigaltstack));
 	}
 
 	return ret;

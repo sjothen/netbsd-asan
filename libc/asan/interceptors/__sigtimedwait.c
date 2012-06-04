@@ -1,3 +1,4 @@
+#include "../asan-interceptors.h"
 #include <signal.h>
 #include <time.h>
 
@@ -15,6 +16,9 @@ __sigtimedwait(const sigset_t *set, siginfo_t *info,
 	if(ret == 0) {
 		ASAN_WRITE_RANGE(info, sizeof(siginfo_t));
 		ASAN_WRITE_RANGE(timeout, sizeof(struct timespec));
+		
+		if(timeout != NULL)
+			ASAN_READ_RANGE(timeout, sizeof(struct timespec));
 	}
 
 	return ret;

@@ -1,3 +1,4 @@
+#include "../asan-interceptors.h"
 #include <sys/poll.h>
 #include <sys/signal.h>
 #include <sys/time.h>
@@ -20,6 +21,12 @@ _sys_pollts(struct pollfd * __restrict fds, nfds_t nfds,
 		int ni = nfds * sizeof(struct pollfd);
 
 		ASAN_WRITE_RANGE(fds, ni);
+
+		if(ts != NULL)
+			ASAN_READ_RANGE(ts, sizeof(struct timespec));
+
+		if(sigmask != NULL)
+			ASAN_READ_RANGE(ts, sizeof(sigset_t));
 	}
 
 	return ret;

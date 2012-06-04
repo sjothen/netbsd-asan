@@ -1,3 +1,4 @@
+#include "../asan-interceptors.h"
 #define _NETBSD_SOURCE
 #include <sys/select.h>
 
@@ -26,6 +27,12 @@ pselect(int nfds, fd_set * __restrict readfds, fd_set * __restrict writefds,
 
 		if(exceptfds != NULL)
 			ASAN_WRITE_RANGE(exceptfds, ni);
+
+		if(timeout != NULL)
+			ASAN_READ_RANGE(timeout, sizeof(struct timespec));
+
+		if(sigmask != NULL)
+			ASAN_READ_RANGE(sigmask, sizeof(sigset_t));
 	}
 
 	return ret;
