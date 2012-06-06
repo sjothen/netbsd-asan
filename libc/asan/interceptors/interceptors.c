@@ -1,4 +1,4 @@
-#include "asan-interceptors.h"
+#include "interceptors.h"
 
 /*
  * Touch each byte of memory, terminated with NUL byte. This

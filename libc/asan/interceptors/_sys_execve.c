@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <unistd.h>
 
 int _sys_execve(const char *, char * const *, char * const *);

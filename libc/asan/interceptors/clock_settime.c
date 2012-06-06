@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <time.h>
 
 int clock_settime(clockid_t, const struct timespec *);

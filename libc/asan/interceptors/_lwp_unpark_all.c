@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <lwp.h>
 
 ssize_t _lwp_unpark_all(const lwpid_t *, size_t,

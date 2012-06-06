@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <sys/ucontext.h>
 
 int _getcontext(struct __ucontext *);

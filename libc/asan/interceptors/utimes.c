@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <sys/time.h>
 
 int utimes(const char *, const struct timeval[2]);

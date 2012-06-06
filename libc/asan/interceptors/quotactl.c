@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <ufs/ufs/quota.h>
 
 int quotactl(const char *, int, int, void *);

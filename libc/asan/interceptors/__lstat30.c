@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <sys/stat.h>
 
 int __lstat30(const char *, struct stat *);

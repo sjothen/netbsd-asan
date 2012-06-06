@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <stdio.h>
 
 int rename(const char *, const char *);

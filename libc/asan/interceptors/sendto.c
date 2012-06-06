@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <sys/socket.h>
 
 ssize_t sendto(int, const void *, size_t, int,

@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <sys/poll.h>
 #include <sys/signal.h>
 #include <sys/time.h>

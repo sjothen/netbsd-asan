@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <sys/stat.h>
 
 int lchmod(const char *, mode_t);

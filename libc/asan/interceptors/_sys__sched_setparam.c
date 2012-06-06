@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <sys/sched.h>
 
 int _sys__sched_setparam(pid_t, lwpid_t, int,

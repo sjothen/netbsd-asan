@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <sys/sched.h>
 
 int _sys__sched_setaffinity(pid_t pid, lwpid_t lid,

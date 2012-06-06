@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <mqueue.h>
 
 ssize_t _sys_mq_receive(mqd_t, char *, size_t,

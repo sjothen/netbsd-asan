@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <unistd.h>
 
 int __truncate(const char *, int, off_t);

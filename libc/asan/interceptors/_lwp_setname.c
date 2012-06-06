@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <lwp.h>
 
 int _lwp_setname(lwpid_t, const char *);

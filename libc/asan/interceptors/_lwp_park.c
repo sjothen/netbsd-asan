@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <lwp.h>
 
 int _lwp_park(const struct timespec *, lwpid_t, const void *, const void *);

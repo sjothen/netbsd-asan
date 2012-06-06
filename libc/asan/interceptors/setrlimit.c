@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <sys/resource.h>
 
 int setrlimit(int, const struct rlimit *);

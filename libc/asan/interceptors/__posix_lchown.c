@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <unistd.h>
 
 int __posix_lchown(const char *, uid_t, gid_t);

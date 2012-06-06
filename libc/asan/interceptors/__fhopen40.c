@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <sys/types.h>
 
 int __fhopen40(const void *, size_t, int);

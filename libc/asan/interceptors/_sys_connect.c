@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/socket.h>
 
 int _sys_connect(int, const struct sockaddr *,

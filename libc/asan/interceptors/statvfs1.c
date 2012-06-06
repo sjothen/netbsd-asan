@@ -1,4 +1,4 @@
-#include "../asan-interceptors.h"
+#include "interceptors.h"
 #include <sys/statvfs.h>
 
 int statvfs1(const char *, struct statvfs *, int);
