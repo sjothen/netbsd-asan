@@ -13,5 +13,5 @@ to find memory bugs in the NetBSD userland and kernel.
 #### Week 2
 
 * Continue adding interceptor functions for syscalls writing to memory and
-  begin adding syscalls that write to memory.
+  begin adding syscalls that read from memory.
 * Add `touch_mem()` function to touch each byte of a null-terminated string.
