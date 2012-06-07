@@ -141,11 +141,16 @@ NOERR=	getegid.S geteuid.S getgid.S getpid.S getppid.S getuid.S \
 
 PSEUDONOERR=	_exit.S
 
-INTERCEPTED_SYSCALLS= read getgroups getsockname
+INTERCEPTED_SYSCALLS= accept.S connect.S mq_receive.S mq_send.S \
+	mq_timedreceive.S mq_timedsend.S msgrcv.S msgsnd.S nanosleep.S \
+	open.S poll.S pollts.S pselect.S read.S readlink.S readv.S \
+	_sched_setparam.S _sched_getparam.S _sched_setaffinity.S \
+	_sched_getaffinity.S select.S __sigprocmask14.S __sigsuspend14.S \
+	wait4.S write.S writev.S
 
 .ifdef LIBC_ASAN
 . for stub in ${INTERCEPTED_SYSCALLS}
-   CPPFLAGS.{stub}.S+= -DINTERCEPTED
+   CPPFLAGS.{stub}+= -DINTERCEPTED
 . endfor
 .endif
 
