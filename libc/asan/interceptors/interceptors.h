@@ -1,6 +1,29 @@
 #ifndef _ASAN_INTERCEPTORS_
 #define _ASAN_INTERCEPTORS_
 
+#include <stdbool.h>
+#include <stdint.h>
+#include <unistd.h>
+
+#define GET_CALLER_PC() (uintptr_t)__builtin_return_address(0)
+#define GET_CURRENT_FRAME() (uintptr_t)__builtin_frame_address(0)
+
+uintptr_t GetCurrentPc() {
+	return GET_CALLER_PC();
+}
+
+void __asan_report_error(uintptr_t pc, uintptr_t bp, uintptr_t sp,
+		uintptr_t addr, bool is_write, size_t access_size) {
+}
+
+// Use this macro if you want to print stack trace with the current
+// function in the top frame.
+#define GET_CURRENT_PC_BP_SP \
+  uintptr_t bp = GET_CURRENT_FRAME();              \
+  uintptr_t pc = GetCurrentPc();   \
+  uintptr_t local_stack;                           \
+  uintptr_t sp = (uintptr_t)&local_stack;
+
 // Macros taken from ASan code (asan_interceptors.cc)
 #define ACCESS_ADDRESS(address, isWrite)   do {         \
   if (AddressIsPoisoned(address)) {                     \
