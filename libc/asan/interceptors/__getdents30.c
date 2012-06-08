@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <dirent.h>
 
 int __getdents30(int, char *, size_t);

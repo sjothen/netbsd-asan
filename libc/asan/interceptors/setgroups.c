@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <unistd.h>
 
 int setgroups(int, const gid_t *);

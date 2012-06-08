@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <unistd.h>
 
 int __getlogin(char *, size_t);

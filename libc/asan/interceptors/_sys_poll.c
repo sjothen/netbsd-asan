@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/poll.h>
 
 int _sys_poll(struct pollfd *, nfds_t, int);

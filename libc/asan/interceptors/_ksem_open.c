@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/ksem.h>
 #define _LIBC
 #include <sys/types.h>

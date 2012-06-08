@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <unistd.h>
 
 ssize_t _sys_write(int, const void *, size_t);

@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <time.h>
 
 int clock_getres(clockid_t, struct timespec *);

@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #define _NETBSD_SOURCE
 #include <sys/select.h>
 

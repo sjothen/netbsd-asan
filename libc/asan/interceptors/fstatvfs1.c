@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/statvfs.h>
 
 int fstatvfs1(int, struct statvfs *, int);

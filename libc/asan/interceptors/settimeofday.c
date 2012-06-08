@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/time.h>
 
 int settimeofday(const struct timeval *, const void *);

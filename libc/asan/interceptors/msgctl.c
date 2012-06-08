@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/msg.h>
 
 int msgctl(int, int, struct msqid_ds *);

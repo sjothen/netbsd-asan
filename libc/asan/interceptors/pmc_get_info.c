@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <unistd.h>
 #include <sys/pmc.h>
 

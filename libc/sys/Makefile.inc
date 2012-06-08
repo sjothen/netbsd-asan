@@ -163,7 +163,7 @@ INTERCEPTED_SYSCALLS= accept.S connect.S mq_receive.S mq_send.S \
 	_lwp_ctl.S _lwp_park.S _lwp_unpark_all.S mkdir.S mkfifo.S mknod.S \
 	modctl.S __mount50.S __msgctl13.S __ntp_gettime30.S pathconf.S \
 	__posix_chown.S __posix_fchown.S __posix_lchown.S __posix_rename.S \
-	profil.S quotactl.S recvfrom.S recvmsg.S rename.S rmdir.S \
+	profil.S quotactl.S recvfrom.S recvmsg.S rename.S rmdir.S revoke.S \
 	sa_register.S sendmsg.S sendto.S setcontext.S setgroups.S setitimer.S \
 	__setlogin.S setrlimit.S setsockopt.S __shmctl13.S __sigaltstack14.S \
 	__sigpending14.S __sigaction_sigtramp.S __sigtimedwait.S socketpair.S \

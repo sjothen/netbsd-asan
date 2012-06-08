@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/socket.h>
 
 int socketpair(int, int, int, int *);

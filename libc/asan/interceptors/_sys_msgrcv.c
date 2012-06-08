@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/msg.h>
 
 ssize_t _sys_msgrcv(int, void *, size_t, long, int);

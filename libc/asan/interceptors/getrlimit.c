@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/resource.h>
 
 int getrlimit(int, struct rlimit *);

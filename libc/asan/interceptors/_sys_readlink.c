@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <unistd.h>
 
 ssize_t _sys_readlink(const char * __restrict, char * __restrict, size_t);

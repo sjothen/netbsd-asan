@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/types.h>
 #include <ufs/lfs/lfs.h>
 

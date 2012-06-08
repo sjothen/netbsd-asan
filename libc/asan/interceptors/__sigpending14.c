@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <signal.h>
 
 int __sigpending14(sigset_t *);

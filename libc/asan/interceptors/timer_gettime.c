@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <time.h>
 
 int timer_gettime(timer_t, struct itimerspec *);

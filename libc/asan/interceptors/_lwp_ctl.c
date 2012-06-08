@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <lwp.h>
 
 int _lwp_ctl(int, struct lwpctl **);

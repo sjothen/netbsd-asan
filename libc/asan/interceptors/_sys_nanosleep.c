@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <time.h>
 
 int _sys_nanosleep(const struct timespec *, struct timespec *);

@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/wait.h>
 #include <sys/resource.h>
 

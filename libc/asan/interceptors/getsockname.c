@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/socket.h>
 
 int getsockname(int s, struct sockaddr * __restrict, socklen_t * __restrict);

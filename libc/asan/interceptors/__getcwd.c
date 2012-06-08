@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <unistd.h>
 
 int __getcwd(char *, size_t);

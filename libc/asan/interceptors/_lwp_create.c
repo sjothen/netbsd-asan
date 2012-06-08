@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <lwp.h>
 
 int _lwp_create(const ucontext_t *, unsigned long, lwpid_t *);

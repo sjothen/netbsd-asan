@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <lwp.h>
 
 int _lwp_wait(lwpid_t wlwp, lwpid_t *rlwp);

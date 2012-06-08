@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/stat.h>
 
 int __fstat30(int, struct stat *);

@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/time.h>
 
 int gettimeofday(struct timeval * __restrict, void * __restrict);

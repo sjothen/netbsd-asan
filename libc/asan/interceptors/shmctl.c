@@ -1,3 +1,4 @@
+#include "interceptors.h"
 #include <sys/shm.h>
 
 int shmctl(int, int, struct shmid_ds *);
