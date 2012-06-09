@@ -2,14 +2,14 @@
 #include <unistd.h>
 #include <sys/uio.h>
 
-ssize_t _sys_readv(int, const struct iovec *, int);
-ssize_t _asan__sys_readv(int, const struct iovec *, int);
+ssize_t __preadv(int, const struct iovec *, int, off_t);
+ssize_t _asan___preadv(int, const struct iovec *, int, off_t);
 
 ssize_t
-_sys_readv(int d, const struct iovec *iov, int iovcnt)
+__preadv(int d, const struct iovec *iov, int iovcnt, off_t offset)
 {
 	int i;
-	ssize_t ret = _asan__sys_readv(d, iov, iovcnt);
+	ssize_t ret = _asan___preadv(d, iov, iovcnt, offset);
 
 	if(ret >= 0) {
 		ASAN_READ_RANGE(iov, sizeof(struct iovec));
