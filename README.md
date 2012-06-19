@@ -15,3 +15,13 @@ to find memory bugs in the NetBSD userland and kernel.
 * Continue adding interceptor functions for syscalls writing to memory and
   begin adding syscalls that read from memory.
 * Add `touch_mem()` function to touch each byte of a null-terminated string.
+
+#### Week 3
+
+* Tie up loose ends with interceptor functions.
+* Begin copying the address sanitizer functionality needed for the interceptor
+  functions.
+
+#### Week 4
+
+* Travel home to Canada.
