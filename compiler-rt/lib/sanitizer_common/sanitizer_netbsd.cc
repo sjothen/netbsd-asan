@@ -212,4 +212,4 @@ bool ProcessMaps::GetObjectNameAndOffset(uptr addr, uptr *offset,
 
 }  // namespace __sanitizer
 
-#endif  // __linux__
+#endif  // __NetBSD__
