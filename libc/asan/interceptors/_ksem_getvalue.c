@@ -3,7 +3,7 @@
 #define _LIBC
 #include <sys/types.h>
 
-	int _ksem_getvalue(semid_t, unsigned int *);
+int _ksem_getvalue(semid_t, unsigned int *);
 int _asan__ksem_getvalue(semid_t, unsigned int *);
 
 int

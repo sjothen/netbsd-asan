@@ -2,16 +2,16 @@
 #define _NETBSD_SOURCE
 #include <sys/select.h>
 
-int select(int, fd_set * __restrict, fd_set * __restrict,
+int _sys_select(int, fd_set * __restrict, fd_set * __restrict,
 	fd_set * __restrict, struct timeval * __restrict);
-int _asan_select(int, fd_set * __restrict, fd_set * __restrict,
+int _asan__sys_select(int, fd_set * __restrict, fd_set * __restrict,
 	fd_set * __restrict, struct timeval * __restrict);
 
 int
-select(int nfds, fd_set * __restrict readfds, fd_set * __restrict writefds,
+_sys_select(int nfds, fd_set * __restrict readfds, fd_set * __restrict writefds,
 	fd_set * __restrict exceptfds, struct timeval * __restrict timeout)
 {
-	int ret = _asan_select(nfds, readfds, writefds, exceptfds, timeout);
+	int ret = _asan__sys_select(nfds, readfds, writefds, exceptfds, timeout);
 
 	if(ret > 0) {
 		int ni = howmany(nfds, NFDBITS) * sizeof(fd_mask);
