@@ -4,6 +4,8 @@
 	return name(__VA_ARGS__); \
 }
 
+#define _NETBSD_SOURCE
+
 #include <sys/time.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -250,7 +252,6 @@ int _sys_pollts(struct pollfd * __restrict fds, nfds_t nfds,
 ssize_t _sys_pread(int fd, void *buf, size_t nread, off_t offset)
 	RENAME(_asan__sys_pread, fd, buf, nread, offset);
 
-#define _NETBSD_SOURCE
 #include <sys/select.h>
 
 int _sys_pselect(int nfds, fd_set * __restrict readfds, fd_set * __restrict writefds,
@@ -488,12 +489,6 @@ int revoke(const char *path)
 
 int rmdir(const char *path)
 	RENAME(_asan_rmdir, path);
-
-#include <sys/sa.h>
-
-int sa_register(sa_upcall_t newp, sa_upcall_t *old, int flags,
-		ssize_t stackinfo_offset)
-	RENAME(_asan_sa_register, newp, old, flags, offset);
 
 ssize_t sendmsg(int s, const struct msghdr *msg, int flags)
 	RENAME(_asan_sendmsg, s, msg, flags);

@@ -11,7 +11,7 @@
 // run-time libraries and implements POSIX-specific functions from
 // sanitizer_libc.h.
 //===----------------------------------------------------------------------===//
-#if defined(__linux__) || defined(__APPLE__)
+#if defined(__linux__) || defined(__APPLE__) || defined(__NetBSD__)
 
 #include "sanitizer_common.h"
 #include "sanitizer_libc.h"
@@ -175,4 +175,4 @@ int internal_sscanf(const char *str, const char *format, ...) {
 
 }  // namespace __sanitizer
 
-#endif  // __linux__ || __APPLE_
+#endif  // __linux__ || __APPLE__ || __NetBSD__
