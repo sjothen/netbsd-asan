@@ -12,7 +12,7 @@
 // Linux-specific interception methods.
 //===----------------------------------------------------------------------===//
 
-#ifdef __linux__
+#if defined(__linux__) || defined(__NetBSD__)
 
 #include <stddef.h>  // for NULL
 #include <dlfcn.h>   // for dlsym

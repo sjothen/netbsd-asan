@@ -13,7 +13,7 @@
 // We simply define functions like malloc, free, realloc, etc.
 // They will replace the corresponding libc functions automagically.
 //===----------------------------------------------------------------------===//
-#ifdef __linux__
+#if defined(__linux__) || defined(__NetBSD__)
 
 #include "asan_allocator.h"
 #include "asan_interceptors.h"
@@ -103,11 +103,13 @@ INTERCEPTOR(size_t, malloc_usable_size, void *ptr) {
   return asan_malloc_usable_size(ptr, &stack);
 }
 
+#ifndef __NetBSD__
 INTERCEPTOR(struct mallinfo, mallinfo) {
   struct mallinfo res;
   REAL(memset)(&res, 0, sizeof(res));
   return res;
 }
+#endif
 
 INTERCEPTOR(int, mallopt, int cmd, int value) {
   return -1;
