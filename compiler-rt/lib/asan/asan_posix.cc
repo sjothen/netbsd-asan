@@ -11,7 +11,7 @@
 //
 // Posix-specific details.
 //===----------------------------------------------------------------------===//
-#if defined(__linux__) || defined(__APPLE__)
+#if defined(__linux__) || defined(__APPLE__) || defined(__NetBSD__)
 
 #include "asan_internal.h"
 #include "asan_interceptors.h"
@@ -123,4 +123,4 @@ void AsanTSDSet(void *tsd) {
 
 }  // namespace __asan
 
-#endif  // __linux__ || __APPLE_
+#endif  // __linux__ || __APPLE__ || __NetBSD__
