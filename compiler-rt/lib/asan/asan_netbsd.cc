@@ -43,19 +43,19 @@ void *AsanDoesNotSupportStaticLinkage() {
 void GetPcSpBp(void *context, uptr *pc, uptr *sp, uptr *bp) {
 #if defined(__arm__)
   ucontext_t *ucontext = (ucontext_t*)context;
-  *pc = ucontext->uc_mcontext.arm_pc;
-  *bp = ucontext->uc_mcontext.arm_fp;
-  *sp = ucontext->uc_mcontext.arm_sp;
+  *pc = ucontext->uc_mcontext.__gregs[_REG_PC];
+  *bp = ucontext->uc_mcontext.__gregs[_REG_FP];
+  *sp = ucontext->uc_mcontext.__gregs[_REG_SP];
 # elif defined(__x86_64__)
   ucontext_t *ucontext = (ucontext_t*)context;
-  *pc = ucontext->uc_mcontext.gregs[REG_RIP];
-  *bp = ucontext->uc_mcontext.gregs[REG_RBP];
-  *sp = ucontext->uc_mcontext.gregs[REG_RSP];
+  *pc = ucontext->uc_mcontext.__gregs[_REG_RIP];
+  *bp = ucontext->uc_mcontext.__gregs[_REG_RBP];
+  *sp = ucontext->uc_mcontext.__gregs[_REG_RSP];
 # elif defined(__i386__)
   ucontext_t *ucontext = (ucontext_t*)context;
-  *pc = ucontext->uc_mcontext.gregs[REG_EIP];
-  *bp = ucontext->uc_mcontext.gregs[REG_EBP];
-  *sp = ucontext->uc_mcontext.gregs[REG_ESP];
+  *pc = ucontext->uc_mcontext.__gregs[_REG_EIP];
+  *bp = ucontext->uc_mcontext.__gregs[_REG_EBP];
+  *sp = ucontext->uc_mcontext.__gregs[_REG_ESP];
 #else
 # error "Unsupported arch"
 #endif
