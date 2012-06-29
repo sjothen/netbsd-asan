@@ -12,7 +12,7 @@
 // Linux-specific interception methods.
 //===----------------------------------------------------------------------===//
 
-#ifdef __linux__
+#if defined(__linux__) || defined(__NetBSD__)
 
 #if !defined(INCLUDED_FROM_INTERCEPTION_LIB)
 # error "interception_linux.h should be included from interception library only"

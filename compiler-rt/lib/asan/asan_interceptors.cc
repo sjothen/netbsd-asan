@@ -367,7 +367,7 @@ INTERCEPTOR(char*, strchr, const char *str, int c) {
   return result;
 }
 
-#ifdef __linux__
+#if defined(__linux__) || defined(__NetBSD__)
 INTERCEPTOR(char*, index, const char *string, int c)
   ALIAS(WRAPPER_NAME(strchr));
 #else

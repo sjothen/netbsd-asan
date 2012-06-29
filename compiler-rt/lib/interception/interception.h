@@ -150,7 +150,7 @@
 
 #define INCLUDED_FROM_INTERCEPTION_LIB
 
-#if defined(__linux__)
+#if defined(__linux__) || defined(__NetBSD__)
 # include "interception_linux.h"
 # define INTERCEPT_FUNCTION(func) INTERCEPT_FUNCTION_LINUX(func)
 #elif defined(__APPLE__)
