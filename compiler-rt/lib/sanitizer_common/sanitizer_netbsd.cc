@@ -30,7 +30,7 @@
 #include <sys/exec.h>
 #include <unistd.h>
 
-struct ps_strings *__ps_strings;
+extern struct ps_strings *__ps_strings;
 
 namespace __sanitizer {
 
