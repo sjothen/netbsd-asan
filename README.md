@@ -25,3 +25,12 @@ to find memory bugs in the NetBSD userland and kernel.
 #### Week 4
 
 * Travel home to Canada.
+
+#### Week 5
+
+* Start adding support to get ASan compiling on NetBSD.
+* Define private copies of non-intercepted syscalls for ASan to use.
+
+#### Week 6
+
+* Continue adding support to get ASan functioning on NetBSD.
