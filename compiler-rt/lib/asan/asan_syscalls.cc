@@ -161,42 +161,42 @@ int _lwp_wait(lwpid_t wlwp, lwpid_t *rlwp)
 int _setcontext(struct __ucontext *ucp)
 	RENAME(_asan__setcontext, ucp);
 
-int _sys___sigprocmask14(int how, const sigset_t *set,
+int __sigprocmask14(int how, const sigset_t *set,
 		sigset_t *oset)
 	RENAME(_asan__sys___sigprocmask14, how, set, oset);
 
-int _sys___sigsuspend14(const sigset_t *sigmask)
+int __sigsuspend14(const sigset_t *sigmask)
 	RENAME(_asan__sys___sigsuspend14, sigmask);
 
 #include <sys/sched.h>
 
-int _sys__sched_getaffinity(pid_t pid, lwpid_t lid,
+int _sched_getaffinity(pid_t pid, lwpid_t lid,
 		size_t size, cpuset_t *cpuset)
 	RENAME(_asan__sys__sched_getaffinity, pid, lid, size, cpuset);
 
-int _sys__sched_getparam(pid_t pid, lwpid_t lid, int *policy,
+int _sched_getparam(pid_t pid, lwpid_t lid, int *policy,
 		struct sched_param *params)
 	RENAME(_asan__sys__sched_getparam, pid, lid, policy, params);
 
-int _sys__sched_setaffinity(pid_t pid, lwpid_t lid,
+int _sched_setaffinity(pid_t pid, lwpid_t lid,
 		size_t size, const cpuset_t *cpuset)
 	RENAME(_asan__sys__sched_setaffinity, pid, lid, size, cpuset);
 
-int _sys__sched_setparam(pid_t pid, lwpid_t lid, int policy,
+int _sched_setparam(pid_t pid, lwpid_t lid, int policy,
 		const struct sched_param *params)
 	RENAME(_asan__sys__sched_setparam, pid, lid, policy, params);
 
 #include <sys/socket.h>
 
-int _sys_accept(int s, struct sockaddr * __restrict addr,
+int accept(int s, struct sockaddr * __restrict addr,
 		socklen_t * __restrict addrlen)
 	RENAME(_asan__sys_accept, s, addr, addrlen);
 
-int _sys_connect(int s, const struct sockaddr *name,
+int connect(int s, const struct sockaddr *name,
 		unsigned int namelen)
 	RENAME(_asan__sys_connect, s, name, namelen);
 
-int _sys_execve(const char *path, char * const *argp, char * const *envp)
+int execve(const char *path, char * const *argp, char * const *envp)
 	RENAME(_asan__sys_execve, path, argp, envp);
 
 #include <fcntl.h>
@@ -204,90 +204,90 @@ int _sys_execve(const char *path, char * const *argp, char * const *envp)
 
 /* XXX: How to wrap vararg functions? */
 int
-_sys_fcntl(int fd, int cmd, ...);
+fcntl(int fd, int cmd, ...);
 
 #include <mqueue.h>
 
-ssize_t _sys_mq_receive(mqd_t mqdes, char *msg_ptr, size_t msg_len,
+ssize_t mq_receive(mqd_t mqdes, char *msg_ptr, size_t msg_len,
 		unsigned *msg_prio)
 	RENAME(_asan__sys_mq_receive, mqdes, msg_ptr, msg_len, msg_prio);
 
-ssize_t _sys_mq_send(mqd_t mqdes, const char *msg_ptr, size_t msg_len,
+ssize_t mq_send(mqd_t mqdes, const char *msg_ptr, size_t msg_len,
 		unsigned msg_prio)
 	RENAME(_asan__sys_mq_send, mqdes, msg_ptr, msg_len, msg_prio);
 
-ssize_t _sys_mq_timedreceive(mqd_t mqdes, char *__restrict msg_ptr, size_t msg_len,
+ssize_t mq_timedreceive(mqd_t mqdes, char *__restrict msg_ptr, size_t msg_len,
 		unsigned *__restrict msg_prio,
 		const struct timespec *__restrict abs_timeout)
 	RENAME(_asan__sys_mq_timedreceive, mqdes, msg_ptr, msg_len, msg_prio, abs_timeout);
 
-ssize_t _sys_mq_timedsend(mqd_t mqdes, const char *msg_ptr, size_t msg_len,
+ssize_t mq_timedsend(mqd_t mqdes, const char *msg_ptr, size_t msg_len,
 		unsigned msg_prio, const struct timespec *abs_timeout)
 	RENAME(_asan__sys_mq_timedsend, mqdes, msg_ptr, msg_len, msg_prio, abs_timeout);
 
 #include <sys/msg.h>
 
-ssize_t _sys_msgrcv(int msqid, void *msgp, size_t msgsz, long msgtyp, int msgflg)
+ssize_t msgrcv(int msqid, void *msgp, size_t msgsz, long msgtyp, int msgflg)
 	RENAME(_asan__sys_msgrcv, msqid, msgp, msgsz, msgtyp, msgflg);
 
-ssize_t _sys_msgsnd(int msqid, const void *msgp, size_t msgsz, int msgflg)
+ssize_t msgsnd(int msqid, const void *msgp, size_t msgsz, int msgflg)
 	RENAME(_asan__sys_msgsnd, msqid, msgp, msgsz, msgflg);
 
-int _sys_nanosleep(const struct timespec *rqtp, struct timespec *rmtp)
+int nanosleep(const struct timespec *rqtp, struct timespec *rmtp)
 	RENAME(_asan__sys_nanosleep, rqtp, rmtp);
 
 /* XXX: How to wrap vararg functions? */
-int _sys_open(const char *path, int flags, ...);
+int open(const char *path, int flags, ...);
 
 #include <sys/poll.h>
 
-int _sys_poll(struct pollfd *fds, nfds_t nfds, int timeout)
+int poll(struct pollfd *fds, nfds_t nfds, int timeout)
 	RENAME(_asan__sys_poll, fds, nfds, timeout);
 
-int _sys_pollts(struct pollfd * __restrict fds, nfds_t nfds,
+int pollts(struct pollfd * __restrict fds, nfds_t nfds,
 		const struct timespec * __restrict ts,
 		const sigset_t * __restrict sigmask)
 	RENAME(_asan__sys_pollts, fds, nfds, ts, sigmask);
 
-ssize_t _sys_pread(int fd, void *buf, size_t nread, off_t offset)
+ssize_t pread(int fd, void *buf, size_t nread, off_t offset)
 	RENAME(_asan__sys_pread, fd, buf, nread, offset);
 
 #include <sys/select.h>
 
-int _sys_pselect(int nfds, fd_set * __restrict readfds, fd_set * __restrict writefds,
+int pselect(int nfds, fd_set * __restrict readfds, fd_set * __restrict writefds,
 		fd_set * __restrict exceptfds, const struct timespec * __restrict timeout,
 		const sigset_t * __restrict sigmask)
 	RENAME(_asan__sys_pselect, nfds, readfds, writefds, exceptfds, timeout, sigmask);
 
-ssize_t _sys_pwrite(int fd, const void *buf, size_t nbyte,
+ssize_t pwrite(int fd, const void *buf, size_t nbyte,
 		int pad, off_t offset)
 	RENAME(_asan__sys_pwrite, fd, buf, nbyte, pad, offset);
 
-ssize_t _sys_read(int fd, void *buf, size_t nread)
+ssize_t read(int fd, void *buf, size_t nread)
 	RENAME(_asan__sys_read, fd, buf, nread);
 
-ssize_t _sys_readlink(const char * __restrict path, char * __restrict buf,
+ssize_t readlink(const char * __restrict path, char * __restrict buf,
 		size_t bufsiz)
 	RENAME(_asan__sys_readlink, path, buf, bufsiz);
 
-ssize_t _sys_readv(int d, const struct iovec *iov, int iovcnt)
+ssize_t readv(int d, const struct iovec *iov, int iovcnt)
 	RENAME(_asan__sys_readv, d, iov, iovcnt);
 
-int _sys_select(int nfds, fd_set * __restrict readfds, fd_set * __restrict writefds,
+int select(int nfds, fd_set * __restrict readfds, fd_set * __restrict writefds,
 		fd_set * __restrict exceptfds, struct timeval * __restrict timeout)
 	RENAME(_asan__sys_select, nfds, readfds, writefds, exceptfds, timeout);
 
 #include <sys/wait.h>
 #include <sys/resource.h>
 
-pid_t _sys_wait4(pid_t wpid, int *status, int options,
+pid_t wait4(pid_t wpid, int *status, int options,
 		struct rusage *rusage)
 	RENAME(_asan__sys_wait4, wpid, status, options, rusage);
 
-ssize_t _sys_write(int fd, const void *buf, size_t nbyte)
+ssize_t write(int fd, const void *buf, size_t nbyte)
 	RENAME(_asan__sys_write, fd, buf, nbyte);
 
-ssize_t _sys_writev(int d, const struct iovec *iov, int iovcnt)
+ssize_t writev(int d, const struct iovec *iov, int iovcnt)
 	RENAME(_asan__sys_writev, d, iov, iovcnt);
 
 int access(const char *path, int flags)
