@@ -90,6 +90,7 @@ COMPATDIR=${.CURDIR}/compat
 .if (${MKYP} != "no")
 .include "${.CURDIR}/yp/Makefile.inc"
 .endif
+.include "${.CURDIR}/asan/Makefile.inc"
 
 NLS=	C.msg Pig.msg ca.msg cs.msg de.msg es.msg fi.msg fr.msg nl.msg \
 	no.msg pl.msg sk.msg sv.msg
