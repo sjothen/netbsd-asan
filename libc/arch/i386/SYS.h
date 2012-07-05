@@ -148,13 +148,16 @@
 	PSEUDO(x,x)
 
 #ifdef WEAK_ALIAS
-#define	WSYSCALL(weak,strong)						\
-#ifndef INTERCEPTED							\
+#ifndef INTERCEPTED
+#define WSYSCALL(weak,strong)						\
 	WEAK_ALIAS(weak,strong);					\
-#endif									\
-	PSEUDO(strong,weak)
+	PSEUDO(strong,weak);
 #else
-#define	WSYSCALL(weak,strong)						\
+#define WSYSCALL(weak,strong)						\
+	PSEUDO(strong,weak);
+#endif
+#else
+#define WSYSCALL(weak,strong)						\
 	PSEUDO(weak,weak)
 #endif
 
