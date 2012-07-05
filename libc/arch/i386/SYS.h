@@ -97,13 +97,16 @@
 #define CURBRK		_ASM_LABEL(curbrk)
 #endif
 
+#ifdef INTERCEPTED
 #define _SYSCALL_NOERROR(x,y)						\
-#ifdef INTERCEPTED							\
 	ENTRY(_asan_ ## x);						\
-#else									\
-	ENTRY(x);							\
-#endif									\
 	SYSTRAP(y)
+#else
+#define _SYSCALL_NOERROR(x,y)						\
+	ENTRY(x);							\
+	SYSTRAP(y)
+#endif
+
 
 #ifdef PIC
 #define _SYSCALL_ERR							\
