@@ -98,7 +98,7 @@
 #endif
 
 #define _SYSCALL_NOERROR(x,y)						\
-#ifndef INTERCEPTED							\
+#ifdef INTERCEPTED							\
 	ENTRY(_asan_ ## x);						\
 #else									\
 	ENTRY(x);							\
