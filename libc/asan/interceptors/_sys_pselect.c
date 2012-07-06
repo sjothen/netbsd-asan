@@ -1,5 +1,5 @@
 #include "interceptors.h"
-#define _NETBSD_SOURCE
+#include <sys/param.h>
 #include <sys/select.h>
 
 int _sys_pselect(int, fd_set * __restrict, fd_set * __restrict,
