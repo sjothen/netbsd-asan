@@ -11,8 +11,9 @@ _sys_open(const char *path, int flags, ...)
 	va_list ap;
 	int ret;
 
+	va_start(ap, flags);
+
 	if(flags == O_CREAT) {
-		va_start(ap, flags);
 		mode_t mode = va_arg(ap, mode_t);
 		ret = _asan__sys_open(path, flags, mode);
 	} else {
