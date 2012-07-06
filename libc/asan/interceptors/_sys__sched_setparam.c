@@ -13,7 +13,7 @@ _sys__sched_setparam(pid_t pid, lwpid_t lid, int policy,
 	int ret = _asan__sys__sched_setparam(pid, lid, policy, params);
 
 	if(ret == 0) {
-		ASAN_READ_RANGE(params, sizeof(struct sched_params));
+		ASAN_READ_RANGE(params, sizeof(struct sched_param));
 	}
 
 	return ret;
