@@ -18,7 +18,7 @@ _sys__sched_getparam(pid_t pid, lwpid_t lid, int *policy,
 			ASAN_WRITE_RANGE(policy, sizeof(int));
 
 		if(params != NULL)
-			ASAN_WRITE_RANGE(params, sizeof(struct sched_params));
+			ASAN_WRITE_RANGE(params, sizeof(struct sched_param));
 	}
 
 	return ret;
