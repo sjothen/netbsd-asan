@@ -14,7 +14,7 @@ gettimeofday(struct timeval * __restrict tp, void * __restrict tzp)
 			ASAN_WRITE_RANGE(tp, sizeof(*tp));
 
 		if(tzp != NULL)
-			ASAN_WRITE_RANGE(tzp, sizeof(*tzp));
+			ASAN_WRITE_RANGE(tzp, sizeof(struct timezone));
 	}
 
 	return ret;
