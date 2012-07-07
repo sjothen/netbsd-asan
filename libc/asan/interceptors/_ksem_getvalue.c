@@ -1,13 +1,12 @@
 #include "interceptors.h"
 #include <sys/ksem.h>
-#define _LIBC
-#include <sys/types.h>
+#include <sys/stdint.h>
 
-int _ksem_getvalue(semid_t, unsigned int *);
-int _asan__ksem_getvalue(semid_t, unsigned int *);
+int _ksem_getvalue(intptr_t, unsigned int *);
+int _asan__ksem_getvalue(intptr_t, unsigned int *);
 
 int
-_ksem_getvalue(semid_t id, unsigned int *value)
+_ksem_getvalue(intptr_t id, unsigned int *value)
 {
 	int ret = _asan__ksem_getvalue(id, value);
 

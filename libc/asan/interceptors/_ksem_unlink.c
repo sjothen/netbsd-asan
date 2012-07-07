@@ -1,7 +1,6 @@
 #include "interceptors.h"
 #include <sys/ksem.h>
-#define _LIBC
-#include <sys/types.h>
+#include <sys/stdint.h>
 
 int _ksem_unlink(const char *);
 int _asan__ksem_unlink(const char *);

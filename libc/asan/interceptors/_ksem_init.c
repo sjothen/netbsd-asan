@@ -1,18 +1,17 @@
 #include "interceptors.h"
 #include <sys/ksem.h>
-#define _LIBC
-#include <sys/types.h>
+#include <sys/stdint.h>
 
-int _ksem_init(unsigned int, semid_t *);
-int _asan__ksem_init(unsigned int, semid_t *);
+int _ksem_init(unsigned int, intptr_t);
+int _asan__ksem_init(unsigned int, intptr_t);
 
 int
-_ksem_init(unsigned int value, semid_t *idp)
+_ksem_init(unsigned int value, intptr_t idp)
 {
 	int ret = _asan__ksem_init(value, idp);
 
 	if(ret == 0)
-		ASAN_WRITE_RANGE(idp, sizeof(semid_t));
+		ASAN_WRITE_RANGE(idp, sizeof(intptr_t));
 
 	return ret;
 }
