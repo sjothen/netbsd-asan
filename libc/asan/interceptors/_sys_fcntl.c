@@ -41,6 +41,9 @@ _sys_fcntl(int fd, int cmd, ...)
 		}
 
 		break;
+	default:
+		ret = -1;
+		break;
 	}
 
 	va_end(ap);
