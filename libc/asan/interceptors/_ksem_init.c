@@ -1,5 +1,4 @@
 #include "interceptors.h"
-#include <sys/ksem.h>
 #include <sys/stdint.h>
 
 int _ksem_init(unsigned int, intptr_t);

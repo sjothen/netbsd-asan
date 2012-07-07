@@ -1,5 +1,4 @@
 #include "interceptors.h"
-#include <sys/ksem.h>
 #include <sys/stdint.h>
 
 int _ksem_getvalue(intptr_t, unsigned int *);
