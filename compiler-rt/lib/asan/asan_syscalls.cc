@@ -1,7 +1,4 @@
 #include <unistd.h>
-
-#define _NETBSD_SOURCE
-
 #include <sys/time.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -113,17 +110,15 @@ int _getcontext(struct __ucontext *ucp)
 	__RENAME(_asan__getcontext);
 
 #include <sys/ksem.h>
-#define _LIBC
-#include <sys/types.h>
 
-int _ksem_getvalue(semid_t id, unsigned int *value)
+int _ksem_getvalue(intptr_t id, unsigned int *value)
 	__RENAME(_asan__ksem_getvalue);
 
-int _ksem_init(unsigned int value, semid_t *idp)
+int _ksem_init(unsigned int value, intptr_t idp)
 	__RENAME(_asan__ksem_init);
 
 int _ksem_open(const char *name, int oflag, mode_t mode,
-		unsigned int value, semid_t *idp)
+		unsigned int value, intptr_t idp)
 	__RENAME(_asan__ksem_open);
 
 int _ksem_unlink(const char *name)
@@ -425,9 +420,10 @@ int lchmod(const char *path, mode_t mode)
 int lchown(const char *path, uid_t owner, gid_t group)
 	__RENAME(_asan_lchown);
 
+#include <ufs/ufs/dinode.h>
 #include <ufs/lfs/lfs.h>
 
-int lfs_bmapv(fsid_t *fsidp, BLOCK_INFO *blkiov, int blkcnt)
+int lfs_bmapv(fsid_t *fsidp, struct block_info *blkiov, int blkcnt)
 	__RENAME(_asan_lfs_bmapv);
 
 int link(const char *path, const char *link)
