@@ -152,11 +152,11 @@ INTERCEPTED_SYSCALLS= accept.S connect.S mq_receive.S mq_send.S \
         fstatvfs1.S futimes.S __getcwd.S __getdents30.S __getfh30.S \
         getvfsstat.S getgroups.S getitimer.S __getlogin.S getpeername.S \
         getrlimit.S getrusage.S getsockname.S getsockopt.S gettimeofday.S \
-        kevent.S _ksem_getvalue.S _ksem_init.S _ksem_open.S _ksem_unlink.S \
+        __kevent50.S _ksem_getvalue.S _ksem_init.S _ksem_open.S _ksem_unlink.S \
         lchflags.S lchmod.S lchown.S lfs_bmapv.S link.S __lstat30.S \
         lutimes.S _lwp_create.S _lwp_getname.S _lwp_setname.S _lwp_wait.S \
         _lwp_ctl.S _lwp_park.S _lwp_unpark_all.S mkdir.S mkfifo.S mknod.S \
-        modctl.S __mount50.S __msgctl13.S __ntp_gettime30.S pathconf.S \
+        modctl.S __mount50.S __msgctl13.S __ntp_gettime50.S pathconf.S \
         __posix_chown.S __posix_fchown.S __posix_lchown.S __posix_rename.S \
         profil.S quotactl.S recvfrom.S recvmsg.S rename.S rmdir.S revoke.S \
         sa_register.S sendmsg.S sendto.S setcontext.S setgroups.S setitimer.S \
