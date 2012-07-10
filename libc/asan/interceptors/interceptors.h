@@ -5,16 +5,18 @@
 #include <stdint.h>
 #include <unistd.h>
 
+#include "sanitizer_internal_defs.h"
+#include "asan_mapping.h"
+
+#define __LIBC12_SOURCE__
+
 #define GET_CALLER_PC() (uintptr_t)__builtin_return_address(0)
 #define GET_CURRENT_FRAME() (uintptr_t)__builtin_frame_address(0)
 
-uintptr_t GetCurrentPc() {
-	return GET_CALLER_PC();
-}
+uintptr_t GetCurrentPc(void);
 
-void __asan_report_error(uintptr_t pc, uintptr_t bp, uintptr_t sp,
-		uintptr_t addr, bool is_write, size_t access_size) {
-}
+void __asan_report_error(uintptr_t, uintptr_t, uintptr_t,
+		uintptr_t, bool, size_t);
 
 // Use this macro if you want to print stack trace with the current
 // function in the top frame.
