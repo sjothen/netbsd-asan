@@ -2,18 +2,18 @@
 #include <sys/event.h>
 #include <sys/time.h>
 
-int kevent(int kq, const struct kevent *changelist, size_t nchanges,
+int _sys___kevent50(int kq, const struct kevent *changelist, size_t nchanges,
 		struct kevent *eventlist, size_t nevents,
 		const struct timespec *timeout);
-int _asan_kevent(int kq, const struct kevent *changelist, size_t nchanges,
+int _asan__sys___kevent50(int kq, const struct kevent *changelist, size_t nchanges,
 		struct kevent *eventlist, size_t nevents,
 		const struct timespec *timeout);
 
-int kevent(int kq, const struct kevent *changelist, size_t nchanges,
+int _sys___kevent(int kq, const struct kevent *changelist, size_t nchanges,
 		struct kevent *eventlist, size_t nevents,
 		const struct timespec *timeout)
 {
-	int ret = _asan_kevent(kq, changelist, nchanges, eventlist,
+	int ret = _asan__sys___kevent(kq, changelist, nchanges, eventlist,
 			nevents, timeout);
 
 	if(ret != -1) {
