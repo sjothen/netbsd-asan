@@ -30,10 +30,12 @@ SRCS+=	posix_fadvise.c posix_madvise.c sched.c sigqueue.c sigtimedwait.c \
 
 # glue to provide compatibility between GCC 1.X and 2.X and for compat
 # with old syscall interfaces.
+.ifndef LIBC_ASAN
 GLUE+= ftruncate.c lseek.c mmap.c pread.c preadv.c pwrite.c \
 	pwritev.c truncate.c ntp_adjtime.c
 
 GLUE50+= adjtime.c clock_settime.c settimeofday.c
+.endif
 
 # 'glue' files might .c or .S depending on the architecture
 .for glue in ${GLUE}
@@ -162,7 +164,7 @@ INTERCEPTED_SYSCALLS= accept.S connect.S mq_receive.S mq_send.S \
         __sigpending14.S __sigaction_sigtramp.S __sigtimedwait.S socketpair.S \
         __stat30.S statvfs1.S swapctl.S symlink.S __sysctl.S timer_create.S \
         timer_gettime.S timer_settime.S undelete.S unlink.S unmount.S \
-        utimes.S uuidgen.S
+        utimes.S uuidgen.S fcntl.S execve.S
 
 .ifdef LIBC_ASAN
 . for stub in ${INTERCEPTED_SYSCALLS}
