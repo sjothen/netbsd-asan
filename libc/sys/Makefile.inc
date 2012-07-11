@@ -148,23 +148,23 @@ INTERCEPTED_SYSCALLS= accept.S connect.S mq_receive.S mq_send.S \
         extattr_list_fd.S extattr_list_file.S extattr_list_link.S \
         extattr_set_fd.S extattr_set_file.S extattr_set_link.S \
         extattr_get_fd.S extattr_get_file.S extattr_get_link.S \
-        __fhopen40.S __fhstat40.S __fhstatvfs140.S __fstat30.S \
-        fstatvfs1.S futimes.S __getcwd.S __getdents30.S __getfh30.S \
+        __fhopen40.S __fhstat50.S __fhstatvfs140.S __fstat50.S \
+        fstatvfs1.S __futimes50.S __getcwd.S __getdents30.S __getfh30.S \
         getvfsstat.S getgroups.S getitimer.S __getlogin.S getpeername.S \
-        getrlimit.S getrusage.S getsockname.S getsockopt.S gettimeofday.S \
+        getrlimit.S getrusage.S getsockname.S getsockopt.S __gettimeofday50.S \
         __kevent50.S _ksem_getvalue.S _ksem_init.S _ksem_open.S _ksem_unlink.S \
-        lchflags.S lchmod.S lchown.S lfs_bmapv.S link.S __lstat30.S \
-        lutimes.S _lwp_create.S _lwp_getname.S _lwp_setname.S _lwp_wait.S \
-        _lwp_ctl.S _lwp_park.S _lwp_unpark_all.S mkdir.S mkfifo.S mknod.S \
-        modctl.S __mount50.S __msgctl13.S __ntp_gettime50.S pathconf.S \
+        lchflags.S lchmod.S lchown.S lfs_bmapv.S link.S __lstat50.S \
+        __lutimes50.S _lwp_create.S _lwp_getname.S _lwp_setname.S _lwp_wait.S \
+        _lwp_ctl.S ___lwp_park50.S _lwp_unpark_all.S mkdir.S mkfifo.S __mknod50.S \
+        modctl.S __mount50.S __msgctl50.S __ntp_gettime50.S pathconf.S \
         __posix_chown.S __posix_fchown.S __posix_lchown.S __posix_rename.S \
-        profil.S quotactl.S recvfrom.S recvmsg.S rename.S rmdir.S revoke.S \
+        profil.S __quotactl.S recvfrom.S recvmsg.S rename.S rmdir.S revoke.S \
         sa_register.S sendmsg.S sendto.S setcontext.S setgroups.S setitimer.S \
-        __setlogin.S setrlimit.S setsockopt.S __shmctl13.S __sigaltstack14.S \
+        __setlogin.S setrlimit.S setsockopt.S __shmctl50.S __sigaltstack14.S \
         __sigpending14.S __sigaction_sigtramp.S __sigtimedwait.S socketpair.S \
-        __stat30.S statvfs1.S swapctl.S symlink.S __sysctl.S timer_create.S \
+        __stat50.S statvfs1.S swapctl.S symlink.S __sysctl.S timer_create.S \
         timer_gettime.S timer_settime.S undelete.S unlink.S unmount.S \
-        utimes.S uuidgen.S fcntl.S execve.S
+        __utimes50.S uuidgen.S fcntl.S execve.S getcontext.S
 
 .ifdef LIBC_ASAN
 . for stub in ${INTERCEPTED_SYSCALLS}
