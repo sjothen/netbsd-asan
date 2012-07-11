@@ -22,8 +22,8 @@ SRCS+=	__adjtime.c __truncate.c _sys_mq_send.c chown.c getsockname.c rename.c \
 	__posix_chown.c _sys___sigprocmask14.c _sys_readv.c extattr_set_fd.c mkfifo.c swapctl.c \
 	__posix_lchown.c _sys___sigsuspend14.c _sys_select.c extattr_set_file.c __mknod50.c symlink.c \
 	__preadv.c _sys_wait4.c extattr_set_link.c modctl.c timer_create.c \
-	__pwritev.c _sys_write.c extattrctl.c __msgctl50.c timer_gettime.c \
-	__setlogin.c _sys_writev.c fstatvfs1.c munmap.c timer_settime.c \
+	__pwritev.c _sys_write.c extattrctl.c __msgctl50.c __timer_gettime50.c \
+	__setlogin.c _sys_writev.c fstatvfs1.c munmap.c __timer_settime50.c \
 	__sigaction_sigtramp.c access.c __futimes50.c pathconf.c undelete.c \
 	__sigaltstack14.c _sys_accept.c acct.c getgroups.c pmc_get_info.c unlink.c \
 	__sigpending14.c _sys_connect.c bind.c __getitimer50.c profil.c unmount.c \

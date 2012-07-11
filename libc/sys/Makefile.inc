@@ -163,7 +163,7 @@ INTERCEPTED_SYSCALLS= accept.S connect.S mq_receive.S mq_send.S \
         __setlogin.S setrlimit.S setsockopt.S __shmctl50.S __sigaltstack14.S \
         __sigpending14.S __sigaction_sigtramp.S __sigtimedwait.S socketpair.S \
         __stat50.S statvfs1.S swapctl.S symlink.S __sysctl.S timer_create.S \
-        timer_gettime.S timer_settime.S undelete.S unlink.S unmount.S \
+        __timer_gettime50.S __timer_settime50.S undelete.S unlink.S unmount.S \
         __utimes50.S uuidgen.S fcntl.S execve.S getcontext.S
 
 .ifdef LIBC_ASAN
