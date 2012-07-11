@@ -27,5 +27,5 @@ SRCS+=	__adjtime.c __truncate.c _sys_mq_send.c chown.c getsockname.c rename.c \
 	__sigaction_sigtramp.c access.c __futimes50.c pathconf.c undelete.c \
 	__sigaltstack14.c _sys_accept.c acct.c getgroups.c pmc_get_info.c unlink.c \
 	__sigpending14.c _sys_connect.c bind.c __getitimer50.c profil.c unmount.c \
-	__sigtimedwait.c _sys_execve.c chdir.c getpeername.c __quotactl.c __utimes50.c \
+	____sigtimedwait50.c _sys_execve.c chdir.c getpeername.c __quotactl.c __utimes50.c \
 	__stat50.c _sys_fcntl.c chflags.c getrlimit.c recvfrom.c uuidgen.c
