@@ -3,10 +3,10 @@
 MKLINT=no
 
 # sa_register.c _sys__sched_getaffinity.c _sys__sched_setaffinity.c
-# _sys__sched_getparam.c _sys__sched_getparam.c
+# _sys__sched_getparam.c _sys__sched_getparam.c _getcontext.c
 
 SRCS+=	__adjtime.c __truncate.c _sys_mq_send.c chown.c getsockname.c rename.c \
-	__fhopen40.c _getcontext.c _sys_mq_timedreceive.c chroot.c getsockopt.c revoke.c \
+	__fhopen40.c _sys_mq_timedreceive.c chroot.c getsockopt.c revoke.c \
 	__fhstat50.c _ksem_getvalue.c _sys_mq_timedsend.c clock_getres.c __gettimeofday50.c rmdir.c \
 	__fhstatvfs140.c _ksem_init.c _sys_msgrcv.c clock_gettime.c getvfsstat.c \
 	__fstat50.c _ksem_open.c _sys_msgsnd.c clock_settime.c interceptors.c sendmsg.c \
@@ -28,4 +28,4 @@ SRCS+=	__adjtime.c __truncate.c _sys_mq_send.c chown.c getsockname.c rename.c \
 	__sigaltstack14.c _sys_accept.c acct.c getgroups.c pmc_get_info.c unlink.c \
 	__sigpending14.c _sys_connect.c bind.c __getitimer50.c profil.c unmount.c \
 	____sigtimedwait50.c _sys_execve.c chdir.c getpeername.c __quotactl.c __utimes50.c \
-	__stat50.c _sys_fcntl.c chflags.c getrlimit.c recvfrom.c uuidgen.c
+	__stat50.c _sys_fcntl.c chflags.c getrlimit.c recvfrom.c uuidgen.c _getcontext.c
