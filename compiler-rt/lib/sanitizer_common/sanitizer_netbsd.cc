@@ -32,6 +32,11 @@
 
 extern struct ps_strings *__ps_strings;
 
+int pthread_attr_getstack(const pthread_attr_t * __restrict,
+        void ** __restrict, size_t * __restrict) __attribute__((weak));
+int pthread_attr_destroy(pthread_attr_t *) __attribute__((weak));
+int pthread_getattr_np(pthread_t, pthread_attr_t *) __attribute__((weak));
+
 namespace __sanitizer {
 
 // --------------- sanitizer_libc.h
