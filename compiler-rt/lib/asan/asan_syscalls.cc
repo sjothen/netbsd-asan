@@ -10,15 +10,15 @@ int __adjtime(const struct timeval *delta, struct timeval *olddelta)
 int __fhopen40(const void *fhp, size_t fh_size, int flags)
 	__RENAME(_asan___fhopen40);
 
-int __fhstat40(const void *fhp, size_t fh_size, struct stat *sb)
-	__RENAME(_asan___fhstat40);
+int __fhstat50(const void *fhp, size_t fh_size, struct stat *sb)
+	__RENAME(_asan___fhstat50);
 
 int __fhstatvfs140(const void *fhp, size_t fh_size,
 		struct statvfs *buf, int flags)
 	__RENAME(_asan___fhstatvfs140);
 
-int __fstat30(int fd, struct stat *sb)
-	__RENAME(_asan___fstat30);
+int __fstat50(int fd, struct stat *sb)
+	__RENAME(_asan___fstat50);
 
 int __getcwd(char *bufp, size_t length)
 	__RENAME(_asan___getcwd);
@@ -36,8 +36,8 @@ int __getfh30(const char *fname, void *fhp, size_t *fh_size)
 int __getlogin(char *namebuf, size_t namelen)
 	__RENAME(_asan___getlogin);
 
-int __lstat30(const char *path, struct stat *sb)
-	__RENAME(_asan___lstat30);
+int __lstat50(const char *path, struct stat *sb)
+	__RENAME(_asan___lstat50);
 
 #include <sys/param.h>
 
@@ -50,8 +50,8 @@ int __mount50(const char *type, const char *path, int flags,
 int __ntp_adjtime(struct timex *tp)
 	__RENAME(_asan___ntp_adjtime);
 
-int __ntp_gettime30(struct ntptimeval *ntvp)
-	__RENAME(_asan___ntp_gettime30);
+int __ntp_gettime50(struct ntptimeval *ntvp)
+	__RENAME(_asan___ntp_gettime50);
 
 int __posix_chown(const char *path, uid_t owner, gid_t group)
 	__RENAME(_asan___posix_chown);
@@ -89,10 +89,10 @@ int __sigpending14(sigset_t *set)
 
 int __sigtimedwait(const sigset_t *set, siginfo_t *info,
 		struct timespec *timeout)
-	__RENAME(_asan___sigtimedwait);
+	__RENAME(_asan____sigtimedwait50);
 
-int __stat30(const char *path, struct stat *ub)
-	__RENAME(_asan___stat30);
+int __stat50(const char *path, struct stat *ub)
+	__RENAME(_asan___stat50);
 
 #include <sys/sysctl.h>
 #include <errno.h>
@@ -135,9 +135,9 @@ int _lwp_ctl(int features, struct lwpctl **address)
 int _lwp_getname(lwpid_t target, char *name, size_t len)
 	__RENAME(_asan__lwp_getname);
 
-int _lwp_park(const struct timespec *ts, lwpid_t unpark,
+int ___lwp_park50(const struct timespec *ts, lwpid_t unpark,
 		const void *hint, const void *unparkhint)
-	__RENAME(_asan__lwp_park);
+	__RENAME(_asan____lwp_park50);
 
 int _lwp_setname(lwpid_t target, const char *name)
 	__RENAME(_asan__lwp_setname);
@@ -371,14 +371,14 @@ int extattrctl(const char *path, int cmd, const char *filename,
 int fstatvfs1(int fd, struct statvfs *buf, int flags)
 	__RENAME(_asan_fstatvfs1);
 
-int futimes(int fd, const struct timeval times[2])
-	__RENAME(_asan_futimes);
+int __futimes50(int fd, const struct timeval times[2])
+	__RENAME(_asan___futimes50);
 
 int getgroups(int gidsetlen, gid_t *gidset)
 	__RENAME(_asan_getgroups);
 
-int getitimer(int which, struct itimerval *value)
-	__RENAME(_asan_getitimer);
+int __getitimer50(int which, struct itimerval *value)
+	__RENAME(_asan___getitimer50);
 
 int getpeername(int s, struct sockaddr * __restrict name,
 		socklen_t * __restrict namelen)
@@ -398,18 +398,18 @@ int getsockopt(int s, int level, int optname, void * __restrict optval,
 		socklen_t * __restrict optlen)
 	__RENAME(_asan_getsockopt);
 
-int gettimeofday(struct timeval * __restrict tp, void * __restrict tzp)
-	__RENAME(_asan_gettimeofday);
+int __gettimeofday50(struct timeval * __restrict tp, void * __restrict tzp)
+	__RENAME(_asan___gettimeofday50);
 
 int getvfsstat(struct statvfs *buf, size_t bufsize, int flags)
 	__RENAME(_asan_getvfsstat);
 
 #include <sys/event.h>
 
-int kevent(int kq, const struct kevent *changelist, size_t nchanges,
+int __kevent50(int kq, const struct kevent *changelist, size_t nchanges,
 		struct kevent *eventlist, size_t nevents,
 		const struct timespec *timeout)
-	__RENAME(_asan_kevent);
+	__RENAME(_asan___kevent50);
 
 int lchflags(const char *path, unsigned long flags)
 	__RENAME(_asan_lchflags);
@@ -429,8 +429,8 @@ int lfs_bmapv(fsid_t *fsidp, struct block_info *blkiov, int blkcnt)
 int link(const char *path, const char *link)
 	__RENAME(_asan_link);
 
-int lutimes(const char *path, const struct timeval times[2])
-	__RENAME(_asan_lutimes);
+int __lutimes50(const char *path, const struct timeval times[2])
+	__RENAME(_asan___lutimes50);
 
 int mkdir(const char *path, mode_t mode)
 	__RENAME(_asan_mkdir);
@@ -491,9 +491,9 @@ ssize_t sendto(int s, const void *msg, size_t len, int flags,
 int setgroups(int ngroups, const gid_t *gidset)
 	__RENAME(_asan_setgroups);
 
-int setitimer(int which, const struct itimerval * __restrict value,
+int __setitimer50(int which, const struct itimerval * __restrict value,
 		struct itimerval * __restrict ovalue)
-	__RENAME(_asan_setitimer);
+	__RENAME(_asan___setitimer50);
 
 int setrlimit(int resource, const struct rlimit *rlp)
 	__RENAME(_asan_setrlimit);
@@ -507,8 +507,8 @@ int settimeofday(const struct timeval *tv, const void *tzp)
 
 #include <sys/shm.h>
 
-int shmctl(int shmid, int cmd, struct shmid_ds *buf)
-	__RENAME(_asan_shmctl);
+int __shmctl50(int shmid, int cmd, struct shmid_ds *buf)
+	__RENAME(_asan___shmctl50);
 
 int socketpair(int d, int type, int protocol, int *sv)
 	__RENAME(_asan_socketpair);
@@ -528,13 +528,13 @@ int timer_create(clockid_t clockid, struct sigevent * __restrict evp,
 		timer_t * __restrict timerid)
 	__RENAME(_asan_timer_create);
 
-int timer_gettime(timer_t timerid, struct itimerspec *tim)
-	__RENAME(_asan_timer_gettime);
+int __timer_gettime50(timer_t timerid, struct itimerspec *tim)
+	__RENAME(_asan___timer_gettime50);
 
-int timer_settime(timer_t timerid, int flags,
+int __timer_settime50(timer_t timerid, int flags,
 		const struct itimerspec * __restrict tim,
 		struct itimerspec * __restrict otim)
-	__RENAME(_asan_timer_settime);
+	__RENAME(_asan___timer_settime50);
 
 int undelete(const char *path)
 	__RENAME(_asan_undelete);
@@ -545,8 +545,8 @@ int unlink(const char *path)
 int unmount(const char *path, int flags)
 	__RENAME(_asan_unmount);
 
-int utimes(const char *path, const struct timeval times[2])
-	__RENAME(_asan_utimes);
+int __utimes50(const char *path, const struct timeval times[2])
+	__RENAME(_asan___utimes50);
 
 #include <sys/uuid.h>
 
