@@ -30,12 +30,12 @@ class AsanThread;
 class AsanThreadSummary {
  public:
   explicit AsanThreadSummary(LinkerInitialized) { }  // for T0.
-  AsanThreadSummary(u32 parent_tid, AsanStackTrace *stack)
-      : parent_tid_(parent_tid),
-        announced_(false) {
+  void Init(u32 parent_tid, AsanStackTrace *stack) {
+    parent_tid_ = parent_tid;
+    announced_ = false;
     tid_ = kInvalidTid;
     if (stack) {
-      stack_ = *stack;
+      internal_memcpy(&stack_, stack, sizeof(*stack));
     }
     thread_ = 0;
   }
