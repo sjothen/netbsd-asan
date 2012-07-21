@@ -2,30 +2,151 @@
 
 MKLINT=no
 
-# sa_register.c _sys__sched_getaffinity.c _sys__sched_setaffinity.c
-# _sys__sched_getparam.c _sys__sched_getparam.c _getcontext.c
-
-SRCS+=	__adjtime.c __truncate.c _sys_mq_send.c chown.c getsockname.c rename.c \
-	__fhopen40.c _sys_mq_timedreceive.c chroot.c getsockopt.c revoke.c \
-	__fhstat50.c _ksem_getvalue.c _sys_mq_timedsend.c clock_getres.c __gettimeofday50.c rmdir.c \
-	__fhstatvfs140.c _ksem_init.c _sys_msgrcv.c clock_gettime.c getvfsstat.c \
-	__fstat50.c _ksem_open.c _sys_msgsnd.c clock_settime.c interceptors.c sendmsg.c \
-	__getcwd.c _ksem_unlink.c _sys_nanosleep.c extattr_delete_fd.c sendto.c \
-	__getdents30.c _lwp_create.c _sys_open.c extattr_delete_file.c _sys___kevent50.c setgroups.c \
-	__getfh30.c _lwp_ctl.c _sys_poll.c extattr_delete_link.c lchflags.c __setitimer50.c \
-	__getlogin.c _lwp_getname.c _sys_pollts.c extattr_get_fd.c lchmod.c setrlimit.c \
-	__lstat50.c ___lwp_park50.c _sys_pread.c extattr_get_file.c lchown.c setsockopt.c \
-	__mmap.c _lwp_setname.c _sys_pselect.c extattr_get_link.c lfs_bmapv.c settimeofday.c \
-	__mount50.c _lwp_unpark_all.c _sys_pwrite.c extattr_list_fd.c link.c __shmctl50.c \
-	__ntp_adjtime.c _lwp_wait.c _sys_read.c extattr_list_file.c __lutimes50.c socketpair.c \
-	__ntp_gettime50.c _setcontext.c _sys_readlink.c extattr_list_link.c mkdir.c statvfs1.c \
-	__posix_chown.c _sys___sigprocmask14.c _sys_readv.c extattr_set_fd.c mkfifo.c swapctl.c \
-	__posix_lchown.c _sys___sigsuspend14.c _sys_select.c extattr_set_file.c __mknod50.c symlink.c \
-	__preadv.c _sys_wait4.c extattr_set_link.c modctl.c timer_create.c \
-	__pwritev.c _sys_write.c extattrctl.c __msgctl50.c __timer_gettime50.c \
-	__setlogin.c _sys_writev.c fstatvfs1.c munmap.c __timer_settime50.c \
-	__sigaction_sigtramp.c access.c __futimes50.c pathconf.c undelete.c \
-	__sigaltstack14.c _sys_accept.c acct.c getgroups.c pmc_get_info.c unlink.c \
-	__sigpending14.c _sys_connect.c bind.c __getitimer50.c profil.c unmount.c \
-	____sigtimedwait50.c _sys_execve.c chdir.c getpeername.c __quotactl.c __utimes50.c \
-	__stat50.c _sys_fcntl.c chflags.c getrlimit.c recvfrom.c uuidgen.c _getcontext.c
+SRCS = \
+_asan_____sigtimedwait50.c \
+_asan____lwp_park50.c \
+_asan___adjtime.c \
+_asan___fhopen40.c \
+_asan___fhstat50.c \
+_asan___fhstatvfs140.c \
+_asan___fstat50.c \
+_asan___futimes50.c \
+_asan___getcwd.c \
+_asan___getdents30.c \
+_asan___getfh30.c \
+_asan___getitimer50.c \
+_asan___getlogin.c \
+_asan___gettimeofday50.c \
+_asan___lstat50.c \
+_asan___lutimes50.c \
+_asan___mknod50.c \
+_asan___mmap.c \
+_asan___mount50.c \
+_asan___msgctl50.c \
+_asan___ntp_adjtime.c \
+_asan___ntp_gettime50.c \
+_asan___posix_chown.c \
+_asan___posix_lchown.c \
+_asan___preadv.c \
+_asan___pwritev.c \
+_asan___quotactl.c \
+_asan___setitimer50.c \
+_asan___setlogin.c \
+_asan___shmctl50.c \
+_asan___sigaction_sigtramp.c \
+_asan___sigaltstack14.c \
+_asan___sigpending14.c \
+_asan___stat50.c \
+_asan___sysctl.c \
+_asan___timer_gettime50.c \
+_asan___timer_settime50.c \
+_asan___truncate.c \
+_asan___utimes50.c \
+_asan__getcontext.c \
+_asan__ksem_getvalue.c \
+_asan__ksem_init.c \
+_asan__ksem_open.c \
+_asan__ksem_unlink.c \
+_asan__lwp_create.c \
+_asan__lwp_ctl.c \
+_asan__lwp_getname.c \
+_asan__lwp_setname.c \
+_asan__lwp_unpark_all.c \
+_asan__lwp_wait.c \
+_asan__setcontext.c \
+_asan__sys___kevent50.c \
+_asan__sys___sigprocmask14.c \
+_asan__sys___sigsuspend14.c \
+#_asan__sys__sched_getaffinity.c \
+#_asan__sys__sched_getparam.c \
+#_asan__sys__sched_setaffinity.c \
+#_asan__sys__sched_setparam.c \
+_asan__sys_accept.c \
+_asan__sys_connect.c \
+_asan__sys_execve.c \
+_asan__sys_fcntl.c \
+_asan__sys_mq_receive.c \
+_asan__sys_mq_send.c \
+_asan__sys_mq_timedreceive.c \
+_asan__sys_mq_timedsend.c \
+_asan__sys_msgrcv.c \
+_asan__sys_msgsnd.c \
+_asan__sys_nanosleep.c \
+_asan__sys_open.c \
+_asan__sys_poll.c \
+_asan__sys_pollts.c \
+_asan__sys_pread.c \
+_asan__sys_pselect.c \
+_asan__sys_pwrite.c \
+_asan__sys_read.c \
+_asan__sys_readlink.c \
+_asan__sys_readv.c \
+_asan__sys_select.c \
+_asan__sys_wait4.c \
+_asan__sys_write.c \
+_asan__sys_writev.c \
+_asan_access.c \
+_asan_acct.c \
+_asan_bind.c \
+_asan_chdir.c \
+_asan_chflags.c \
+_asan_chmod.c \
+_asan_chown.c \
+_asan_chroot.c \
+_asan_clock_getres.c \
+_asan_clock_gettime.c \
+_asan_clock_settime.c \
+_asan_extattr_delete_fd.c \
+_asan_extattr_delete_file.c \
+_asan_extattr_delete_link.c \
+_asan_extattr_get_fd.c \
+_asan_extattr_get_file.c \
+_asan_extattr_get_link.c \
+_asan_extattr_list_fd.c \
+_asan_extattr_list_file.c \
+_asan_extattr_list_link.c \
+_asan_extattr_set_fd.c \
+_asan_extattr_set_file.c \
+_asan_extattr_set_link.c \
+_asan_extattrctl.c \
+_asan_fstatvfs1.c \
+_asan_getgroups.c \
+_asan_getpeername.c \
+_asan_getrlimit.c \
+_asan_getrusage.c \
+_asan_getsockname.c \
+_asan_getsockopt.c \
+_asan_getvfsstat.c \
+_asan_lchflags.c \
+_asan_lchmod.c \
+_asan_lchown.c \
+_asan_lfs_bmapv.c \
+_asan_link.c \
+_asan_mkdir.c \
+_asan_mkfifo.c \
+_asan_modctl.c \
+_asan_munmap.c \
+_asan_pathconf.c \
+_asan_pmc_get_info.c \
+_asan_profil.c \
+_asan_recvfrom.c \
+_asan_recvmsg.c \
+_asan_rename.c \
+_asan_revoke.c \
+_asan_rmdir.c \
+_asan_sa_register.c \
+_asan_sendmsg.c \
+_asan_sendto.c \
+_asan_setgroups.c \
+_asan_setrlimit.c \
+_asan_setsockopt.c \
+_asan_settimeofday.c \
+_asan_socketpair.c \
+_asan_statvfs1.c \
+_asan_swapctl.c \
+_asan_symlink.c \
+_asan_timer_create.c \
+_asan_undelete.c \
+_asan_unlink.c \
+_asan_unmount.c \
+_asan_uuidgen.c \
