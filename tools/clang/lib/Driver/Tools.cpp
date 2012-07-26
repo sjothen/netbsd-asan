@@ -1425,6 +1425,20 @@ static void addMsanRTLinux(const ToolChain &TC, const ArgList &Args,
   }
 }
 
+/// If MemorySanitizer is enabled, add appropriate linker flags (NetBSD).
+/// This needs to be called before we add the C run-time (malloc, etc).
+static void addMsanRTNetBSD(const ToolChain &TC, const ArgList &Args,
+                           ArgStringList &CmdArgs) {
+  if (!Args.hasFlag(options::OPT_fmemory_sanitizer,
+                    options::OPT_fno_memory_sanitizer, false))
+    return;
+  if (!Args.hasArg(options::OPT_shared)) {
+    if (!Args.hasArg(options::OPT_pie))
+      TC.getDriver().Diag(diag::err_drv_tsan_msan_require_pie);
+    CmdArgs.push_back("-lclang_msan");
+  }
+}
+
 static bool shouldUseFramePointer(const ArgList &Args,
                                   const llvm::Triple &Triple) {
   if (Arg *A = Args.getLastArg(options::OPT_fno_omit_frame_pointer,
@@ -5197,6 +5211,7 @@ void netbsd::Link::ConstructJob(Compilation &C, const JobAction &JA,
   AddLinkerInputs(getToolChain(), Inputs, Args, CmdArgs);
 
   addAsanRTNetBSD(getToolChain(), Args, CmdArgs);
+  addMsanRTNetBSD(getToolChain(), Args, CmdArgs);
 
   if (!Args.hasArg(options::OPT_nostdlib) &&
       !Args.hasArg(options::OPT_nodefaultlibs)) {
