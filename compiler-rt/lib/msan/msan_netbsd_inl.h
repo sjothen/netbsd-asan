@@ -133,7 +133,7 @@ void BacktraceStackTrace() {
 static void MsanTrap(int, siginfo_t *siginfo, void *context) {
   __msan_warning();
   ucontext_t *ucontext = (ucontext_t*)context;
-  ucontext->uc_mcontext.gregs[REG_RIP] += 2;
+  ucontext->uc_mcontext.__gregs[_REG_RIP] += 2;
 }
 
 void InstallTrapHandler() {
