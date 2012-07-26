@@ -132,8 +132,18 @@ void BacktraceStackTrace() {
 
 static void MsanTrap(int, siginfo_t *siginfo, void *context) {
   __msan_warning();
+#if defined(__arm__)
+  ucontext_t *ucontext = (ucontext_t*)context;
+  context->uc_mcontext.__gregs[_REG_PC] += 2;
+# elif defined(__x86_64__)
   ucontext_t *ucontext = (ucontext_t*)context;
   ucontext->uc_mcontext.__gregs[_REG_RIP] += 2;
+# elif defined(__i386__)
+  ucontext_t *ucontext = (ucontext_t*)context;
+  ucontext->uc_mcontext.__gregs[_REG_EIP] += 2;
+#else
+# error "Unsupported arch"
+#endif
 }
 
 void InstallTrapHandler() {
