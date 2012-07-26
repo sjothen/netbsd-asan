@@ -28,11 +28,7 @@ static const uptr kBad2End    = kMemBeg - 1;
 
 void *Mmap(void *addr, uptr length, int prot, int flags,
                     int fd, u64 offset) {
-# if __WORDSIZE == 64
-  return (void *)syscall(__NR_mmap, addr, length, prot, flags, fd, offset);
-# else
-  return (void *)syscall(__NR_mmap2, addr, length, prot, flags, fd, offset);
-# endif
+    return (void *)mmap(addr, length, prot, flags, fd, offset);
 }
 
 static int MsanOpenReadonly(const char* filename) {
