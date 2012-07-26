@@ -244,4 +244,10 @@ void __msan_partial_poison(void* data, void* shadow, uptr size) {
   internal_memcpy((void*)MEM_TO_SHADOW((uptr)data), shadow, size);
 }
 
-#include "msan_linux_inl.h"
+#if defined(__linux__)
+# include "msan_linux_inl.h"
+#elif defined(__NetBSD__)
+# include "msan_netbsd_inl.h"
+#else
+# error "Operating system not supported with MSan."
+#endif
