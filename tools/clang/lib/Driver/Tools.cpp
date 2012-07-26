@@ -1365,38 +1365,17 @@ static bool UseRelaxAll(Compilation &C, const ArgList &Args) {
     RelaxDefault);
 }
 
-/// If AddressSanitizer is enabled, add appropriate linker flags (Linux).
+/// If AddressSanitizer is enabled, add appropriate linker flags (NetBSD).
 /// This needs to be called before we add the C run-time (malloc, etc).
-static void addAsanRTLinux(const ToolChain &TC, const ArgList &Args,
+static void addAsanRTNetBSD(const ToolChain &TC, const ArgList &Args,
                            ArgStringList &CmdArgs) {
   if (!Args.hasFlag(options::OPT_faddress_sanitizer,
                     options::OPT_fno_address_sanitizer, false))
     return;
-  if(TC.getTriple().getEnvironment() == llvm::Triple::ANDROIDEABI) {
-    if (!Args.hasArg(options::OPT_shared)) {
-      if (!Args.hasArg(options::OPT_pie))
-        TC.getDriver().Diag(diag::err_drv_asan_android_requires_pie);
-      // For an executable, we add a .preinit_array stub.
-      CmdArgs.push_back("-u");
-      CmdArgs.push_back("__asan_preinit");
-      CmdArgs.push_back("-lasan");
-    }
-
-    CmdArgs.push_back("-lasan_preload");
-    CmdArgs.push_back("-ldl");
-  } else {
-    if (!Args.hasArg(options::OPT_shared)) {
-      // LibAsan is "libclang_rt.asan-<ArchName>.a" in the Linux library
-      // resource directory.
-      SmallString<128> LibAsan(TC.getDriver().ResourceDir);
-      llvm::sys::path::append(LibAsan, "lib", "linux",
-                              (Twine("libclang_rt.asan-") +
-                               TC.getArchName() + ".a"));
-      CmdArgs.push_back(Args.MakeArgString(LibAsan));
-      CmdArgs.push_back("-lpthread");
-      CmdArgs.push_back("-ldl");
-      CmdArgs.push_back("-export-dynamic");
-    }
+  if (!Args.hasArg(options::OPT_shared)) {
+    // LibAsan is "libclang_rt.asan-<ArchName>.a" in the Linux library
+    // resource directory.
+    CmdArgs.push_back("-lclang_asan");
   }
 }
 
@@ -5216,6 +5195,8 @@ void netbsd::Link::ConstructJob(Compilation &C, const JobAction &JA,
   Args.AddAllArgs(CmdArgs, options::OPT_r);
 
   AddLinkerInputs(getToolChain(), Inputs, Args, CmdArgs);
+
+  addAsanRTNetBSD(getToolChain(), Args, CmdArgs);
 
   if (!Args.hasArg(options::OPT_nostdlib) &&
       !Args.hasArg(options::OPT_nodefaultlibs)) {
