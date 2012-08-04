@@ -134,7 +134,6 @@ _asan_recvmsg.c \
 _asan_rename.c \
 _asan_revoke.c \
 _asan_rmdir.c \
-_asan_sa_register.c \
 _asan_sendmsg.c \
 _asan_sendto.c \
 _asan_setgroups.c \
