@@ -11,8 +11,8 @@ getsockopt(int s, int level, int optname, void * __restrict optval,
 {
 	int ret = _asan_getsockopt(s, level, optname, optval, optlen);
 
-	if(ret == 0 && optval != NULL)
-		ASAN_WRITE_RANGE(optval, optlen);
+	if(ret == 0 && optval != NULL && optlen != NULL)
+		ASAN_WRITE_RANGE(optval, *optlen);
 
 	return ret;
 }
