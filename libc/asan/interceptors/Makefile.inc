@@ -57,10 +57,10 @@ _asan__setcontext.c \
 _asan__sys___kevent50.c \
 _asan__sys___sigprocmask14.c \
 _asan__sys___sigsuspend14.c \
-#_asan__sys__sched_getaffinity.c \
-#_asan__sys__sched_getparam.c \
-#_asan__sys__sched_setaffinity.c \
-#_asan__sys__sched_setparam.c \
+_asan__sys__sched_getaffinity.c \
+_asan__sys__sched_getparam.c \
+_asan__sys__sched_setaffinity.c \
+_asan__sys__sched_setparam.c \
 _asan__sys_accept.c \
 _asan__sys_connect.c \
 _asan__sys_execve.c \
