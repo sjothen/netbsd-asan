@@ -20,7 +20,8 @@ SRCS+=		asan_allocator.cc asan_globals.cc \
 		asan_rtl.cc asan_stack.cc asan_stats.cc \
 		asan_thread.cc asan_thread_registry.cc \
 		asan_posix.cc asan_interceptors.cc \
-		asan_malloc_linux.cc asan_new_delete.cc
+		asan_malloc_linux.cc asan_new_delete.cc \
+		asan_syscalls.cc
 
 .PATH: ${COMPILER_RT_SRCDIR}/lib/sanitizer_common
 
